@@ -25,12 +25,20 @@ public class PlayerBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         Instantiate(impactEffect, transform.position, transform.rotation); // Спавним эффект удара в месте попадания пули
-        Destroy(gameObject); // Уничтожаем саму пулю
+        
+        if (other.tag == "PlayerBullet") //
+        {                               //
+                                        //
+        }                               //
+        else                            //
+        {                                //
+            Destroy(gameObject); // Уничтожаем саму пулю
 
-        if (other.tag == "Enemy") // "Если у объекта, в который попала пуля, есть тэг "Enemy"
-        {
-            other.GetComponent<EnemyController>().DamageEnemy(damageToGive); // Вызываем у EnemyController метод DamageEnemy
-        }
+            if (other.tag == "Enemy") // "Если у объекта, в который попала пуля, есть тэг "Enemy"
+            {
+                other.GetComponent<EnemyController>().DamageEnemy(damageToGive); // Вызываем у EnemyController метод DamageEnemy
+            }
+        }                                   //
     }
 
     void OnBecameInvisible() 

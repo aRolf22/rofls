@@ -19,9 +19,9 @@ TagManager:
   - Player Bullets
   - Enemies
   - Enemy Bullets
-  - 
-  - 
-  - 
+  - Breakable
+  - IgnoreBullets
+  - Pickups
   - 
   - 
   - 
@@ -42,6 +42,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3675384687
+    locked: 0
+  - name: Objects
+    uniqueID: 4131367153
+    locked: 0
+  - name: Pickups
+    uniqueID: 1451315449
+    locked: 0
+  - name: Enemies
+    uniqueID: 2119100967
+    locked: 0
+  - name: Bullets
+    uniqueID: 1607738533
     locked: 0
   - name: Player
     uniqueID: 2506005445

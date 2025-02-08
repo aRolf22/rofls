@@ -60,6 +60,8 @@ public class EnemyController : MonoBehaviour
                 {
                     fireCounter = fireRate;
                     Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+
+                    AudioManager.instance.PlaySFX(13);    // звук Shoot2
                 }
             }
         }
@@ -84,15 +86,21 @@ public class EnemyController : MonoBehaviour
     {
         health -= damage;
 
+        AudioManager.instance.PlaySFX(2);   // звук Enemy Hurt
+
         Instantiate(hitEffect, transform.position, transform.rotation);
 
         if (health <= 0) 
         {
             Destroy(gameObject);
 
+            AudioManager.instance.PlaySFX(1);    // звук Enemy Death
+
             int selectedSplatter = Random.Range(0, splatterEffects.Length); // Рандомим номер спрайта из массива с ними
             int rotationRandomMultiplier = Random.Range(0, 4); // Необязательная штука, но нужна, что рандомный спрайт еще и справнился с рандомным углом Rotation. Будем умножать текущее значение по Z рандомно на 0, 1, 2 или 3
             Instantiate(splatterEffects[selectedSplatter], transform.position, Quaternion.Euler(0f, 0f, rotationRandomMultiplier * 90f)); // Спавн рандомного спрайта
+
+
         }
     } 
 }

@@ -34,6 +34,8 @@ public class PlayerBullet : MonoBehaviour
         {                                //
             Destroy(gameObject); // Уничтожаем саму пулю
 
+            AudioManager.instance.PlaySFX(4);    // звук Impact
+
             if (other.tag == "Enemy") // "Если у объекта, в который попала пуля, есть тэг "Enemy"
             {
                 other.GetComponent<EnemyController>().DamageEnemy(damageToGive); // Вызываем у EnemyController метод DamageEnemy

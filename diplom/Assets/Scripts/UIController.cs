@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -12,6 +13,9 @@ public class UIController : MonoBehaviour
     public Image fadeScreen; // фигни для затухание экрана
     public float fadeSpeed; // для скорости затухания
     private bool fadeToBlack, fadeOutBlack; // затухание и появление
+
+    public string newGameScene, mainMenuScene;
+    public GameObject pauseMenu;
     private void Awake() 
     {
         instance = this;
@@ -49,5 +53,20 @@ public class UIController : MonoBehaviour
     {
         fadeToBlack = true;
         fadeOutBlack = false;
+    }
+    public void NewGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(newGameScene);
+    }
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(mainMenuScene);
+    }
+
+    public void Resume()
+    {
+        LevelManager.instance.PauseUnpause();
     }
 }

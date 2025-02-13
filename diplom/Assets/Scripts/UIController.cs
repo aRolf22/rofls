@@ -9,6 +9,9 @@ public class UIController : MonoBehaviour
     public Text healthText;
     
     public GameObject deathScreen;
+    public Image fadeScreen; // фигни для затухание экрана
+    public float fadeSpeed; // для скорости затухания
+    private bool fadeToBlack, fadeOutBlack; // затухание и появление
     private void Awake() 
     {
         instance = this;
@@ -17,12 +20,34 @@ public class UIController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        fadeOutBlack = true;
+        fadeToBlack = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(fadeOutBlack)
+        {
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
+            if (fadeScreen.color.a == 0f)
+            {
+                fadeOutBlack = false;
+            }
+        }
+
+          if(fadeToBlack)
+        {
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
+            if (fadeScreen.color.a == 1f)
+            {
+                fadeToBlack = false;
+            }
+        }
+    }
+    public void StartFadeToBlack() // эт для затухание при переходе на другой лвл (в levelmanager вызывается)
+    {
+        fadeToBlack = true;
+        fadeOutBlack = false;
     }
 }

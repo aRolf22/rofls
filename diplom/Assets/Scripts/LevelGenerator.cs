@@ -29,6 +29,8 @@ public class LevelGenerator : MonoBehaviour
 
     private List<GameObject> generatedOutlines = new List<GameObject>();
 
+    public RoomCenter centerStart, centerEnd;
+    public RoomCenter[] potentialCenters;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -67,6 +69,33 @@ public class LevelGenerator : MonoBehaviour
             CreateRoomOutline(room.transform.position);
         }
         CreateRoomOutline(endRoom.transform.position); // end room
+
+        
+        foreach(GameObject outline in generatedOutlines) // Заполнение layout'ов контентом
+        {
+            bool generateCenter = true;
+
+            if(outline.transform.position == Vector3.zero) // если это самая стартовая комната
+            {
+                Instantiate(centerStart, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+
+                generateCenter = false;
+            }
+
+            if (outline.transform.position == endRoom.transform.position) 
+            {
+                Instantiate(centerEnd, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+
+                generateCenter = false;
+            }
+
+            if (generateCenter) 
+            {
+                int centerSelect = Random.Range(0, potentialCenters.Length);
+
+                Instantiate(potentialCenters[centerSelect], outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+            }
+        }
     }
 
     // Update is called once per frame

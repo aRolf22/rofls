@@ -214,15 +214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793c347a7ce1b074da18805891aced48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeWhenEntered: 1
-  openWhenEnemiesCleared: 1
+  closeWhenEntered: 0
   doors:
   - {fileID: 6404126344638321441}
-  - {fileID: 7512180217496983493}
-  enemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  roomActive: 0
 --- !u!50 &6505505783592946803
 Rigidbody2D:
   serializedVersion: 5
@@ -1280,9 +1275,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -619582609
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

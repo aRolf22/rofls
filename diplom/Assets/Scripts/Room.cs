@@ -58,7 +58,7 @@ public class Room : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            CameraController.instance.ChangeTarget(transform); // если игрок входят в коллайдер комнаты переносим туда камеру
+            CameraController.instance.ChangeTarget(transform); // если игрок входит в коллайдер комнаты, то переносим туда камеру
 
             if(closeWhenEntered)
             {

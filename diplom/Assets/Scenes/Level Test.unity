@@ -4478,6 +4478,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: potentialCenters.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: 'potentialCenters.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2510559275573706654, guid: 14affb9c4a4ee5f47a0c267faf6a4360, type: 3}
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: 'potentialCenters.Array.data[3]'
+      value: 
+      objectReference: {fileID: 4697127864567200920, guid: 7698fe9867027484aa0c645b29f2f7cd, type: 3}
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: 'potentialCenters.Array.data[4]'
+      value: 
+      objectReference: {fileID: 5302452751418578499, guid: b98a22e223587e646923e642ac429d20, type: 3}
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: 'potentialCenters.Array.data[5]'
+      value: 
+      objectReference: {fileID: 6191956593434237629, guid: 9697efaf63437d3408c7fd2cc13dbc9d, type: 3}
     - target: {fileID: 8141646044961369941, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: m_Name
       value: Level Generator

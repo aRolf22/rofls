@@ -26,12 +26,12 @@ public class LevelManager : MonoBehaviour
             PauseUnpause();
         }
     }
-    public IEnumerator LevelEnd() // непоятные еврейские фокусы для создания корутина (типо указывая IEnumerator, мы мождем делает паузу в выполение метода при помощи yield return )
+    public IEnumerator LevelEnd() //для создания корутина (типо указывая IEnumerator, мы можем делать паузу в выполение метода при помощи yield return )
     {
         AudioManager.instance.PlayerLevelWin(); // победная музыка
         PlayerController.instance.canMove = false;
         UIController.instance.StartFadeToBlack(); // затухание экрана
-        yield return new WaitForSeconds(waitToLoad); // время чтобы наслаждиться победной музыкой
+        yield return new WaitForSeconds(waitToLoad); // время чтобы насладиться победной музыкой
         SceneManager.LoadScene(nextLevel); // меняем сцену на след лвл
     }
     public void PauseUnpause()

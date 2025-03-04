@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isMoving", false);
             }
-        } else { // делаем так чтобы микрочелик переставал двигаться в том направление, в котором  двигался до паузу (yield return new WaitForSeconds(waitToLoad); (это в levelmanager) )
+        } else { // делаем так чтобы игрок переставал двигаться в том направление, в котором  двигался до паузу (yield return new WaitForSeconds(waitToLoad); (это в levelmanager) )
             theRB.linearVelocity = Vector2.zero;
             anim.SetBool("isMoving", false);
         }

@@ -31,7 +31,7 @@ public class DamagePlayer : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D other) // Коллизия для объектов, через которые нельзя можно пройти
+    private void OnCollisionEnter2D(Collision2D other) // Коллизия для объектов, через которые нельзя можно/пройти
     {
         if (other.gameObject.tag == "Player") 
         {

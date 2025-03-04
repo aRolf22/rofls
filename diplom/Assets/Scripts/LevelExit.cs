@@ -19,7 +19,7 @@ public class LevelExit : MonoBehaviour
         if(other.tag == "Player")
         {
             // SceneManager.LoadScene(levelToLoad); теперь это работает через LevelManager
-            StartCoroutine(LevelManager.instance.LevelEnd()); // непоятные еврейские фокусы, Запускаем корутин, который создается  при помощи IEnumerator в levelmanager
+            StartCoroutine(LevelManager.instance.LevelEnd()); // Запускаем корутин, который создается  при помощи IEnumerator в levelmanager
         }
     }
 }

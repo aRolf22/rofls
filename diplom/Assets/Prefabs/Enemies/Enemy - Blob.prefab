@@ -154,6 +154,14 @@ MonoBehaviour:
   shouldWander: 1
   wanderLength: 4
   pauseLength: 1.5
+  shouldPatrol: 0
+  patrolPoints: []
+  shouldShoot: 0
+  bullet: {fileID: 8276429070609871605, guid: a1929cdba26745d4592e0ca8a619a76a, type: 3}
+  firePoint: {fileID: 8292716182575837522}
+  fireRate: 1.5
+  shootRange: 7
+  theBody: {fileID: 8798021187768887567}
   anim: {fileID: 8678344525457583706}
   health: 150
   splatterEffects:
@@ -162,12 +170,10 @@ MonoBehaviour:
   - {fileID: 7428339103432841127, guid: 8f8a93a933a3b7d47ad64d1f853edfba, type: 3}
   - {fileID: 2123370024433855411, guid: 744df9c640344d840b3d7c5b9103da40, type: 3}
   hitEffect: {fileID: 3906643056950189461, guid: 8948a57b8a571414ab667d1754679436, type: 3}
-  shouldShoot: 0
-  bullet: {fileID: 8276429070609871605, guid: a1929cdba26745d4592e0ca8a619a76a, type: 3}
-  firePoint: {fileID: 8292716182575837522}
-  fireRate: 1.5
-  shootRange: 7
-  theBody: {fileID: 8798021187768887567}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 1715260805381554124, guid: 67072b906fa22d34d853c39ec541dea1, type: 3}
+  itemDropPercent: 25
 --- !u!114 &7141145638805403672
 MonoBehaviour:
   m_ObjectHideFlags: 0

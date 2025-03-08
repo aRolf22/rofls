@@ -204,6 +204,10 @@ MonoBehaviour:
   - {fileID: 7428339103432841127, guid: 8f8a93a933a3b7d47ad64d1f853edfba, type: 3}
   - {fileID: 2123370024433855411, guid: 744df9c640344d840b3d7c5b9103da40, type: 3}
   hitEffect: {fileID: 3906643056950189461, guid: 8948a57b8a571414ab667d1754679436, type: 3}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 1715260805381554124, guid: 67072b906fa22d34d853c39ec541dea1, type: 3}
+  itemDropPercent: 25
 --- !u!114 &6251281409648857697
 MonoBehaviour:
   m_ObjectHideFlags: 0

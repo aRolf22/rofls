@@ -8,14 +8,20 @@ public class LevelManager : MonoBehaviour
     public float waitToLoad = 4f; // задержка при переходе на уровень
     public string nextLevel; // название сцены уровня для его загрузки
     public bool isPaused;
+
+    public int currentCoins;
+
     private void Awake()
     {
         instance = this;
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Time.timeScale = 1f;
+
+        UIController.instance.coinText.text = currentCoins.ToString();
     }
 
     // Update is called once per frame
@@ -48,5 +54,26 @@ public class LevelManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     } 
+    
+    public void GetCoins(int amount) 
+    {
+        currentCoins += amount;
+               
+        // Обновляем инфу на UI при получении монет
+        UIController.instance.coinText.text = currentCoins.ToString();
+    }
+
+    public void SpendCoins(int amount) 
+    {
+        currentCoins -= amount;
+
+        if (currentCoins <= 0) 
+        {
+            currentCoins = 0;
+        }
+
+        // Обновляем инфу на UI при трате монет
+        UIController.instance.coinText.text = currentCoins.ToString();
+    }
     
 }

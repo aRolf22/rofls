@@ -38,7 +38,7 @@ public class Breakables : MonoBehaviour
             Instantiate(brokenPieces[randomPiece], transform.position, transform.rotation);
         }
 
-        // drop items
+        // Дроп предметов
         if (shouldDropItem) 
         {
             float dropChance = Random.Range(0f, 100f); // крутим рулетку от 0 до 100

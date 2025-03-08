@@ -50,6 +50,10 @@ public class EnemyController : MonoBehaviour
     public GameObject hitEffect; // Эффект "кровотечения"
 
 
+    public bool shouldDropItem;
+    public GameObject[] itemsToDrop;
+    public float itemDropPercent; // Шанс выпадения дропа
+
     void Start()
     {
         if(shouldWander)
@@ -179,7 +183,17 @@ public class EnemyController : MonoBehaviour
             int rotationRandomMultiplier = Random.Range(0, 4); // Необязательная штука, но нужна, что рандомный спрайт еще и справнился с рандомным углом Rotation. Будем умножать текущее значение по Z рандомно на 0, 1, 2 или 3
             Instantiate(splatterEffects[selectedSplatter], transform.position, Quaternion.Euler(0f, 0f, rotationRandomMultiplier * 90f)); // Спавн рандомного спрайта
 
-
+            // Дроп предметов
+            if (shouldDropItem) 
+            {
+                float dropChance = Random.Range(0f, 100f); // крутим рулетку от 0 до 100
+                        
+                if (dropChance < itemDropPercent) // Если на рулетке выпало значение от 0 до itemDropPercent, то дропаем предмет
+                {
+                    int randomItem = Random.Range(0, itemsToDrop.Length);
+                    Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
+                }
+            }
         }
     } 
 }

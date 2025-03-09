@@ -250,7 +250,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2134619506239720539}
+  - {fileID: 4412467023933252980}
+  - {fileID: 2082975175243478266}
   m_Father: {fileID: 5868016209758272826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2771505852680930148
@@ -501,9 +504,6 @@ Transform:
   - {fileID: 3574181966218385476}
   - {fileID: 5591431864096869778}
   - {fileID: 4402277925300830889}
-  - {fileID: 2134619506239720539}
-  - {fileID: 4412467023933252980}
-  - {fileID: 2082975175243478266}
   - {fileID: 1902477120532887629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2355,7 +2355,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5868016209758272826}
+    m_TransformParent: {fileID: 4402277925300830889}
     m_Modifications:
     - target: {fileID: 1811961337069766684, guid: 75ca44b6ad8e2e54e835803351d20e97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2426,7 +2426,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5868016209758272826}
+    m_TransformParent: {fileID: 4402277925300830889}
     m_Modifications:
     - target: {fileID: 1811961337069766684, guid: 75ca44b6ad8e2e54e835803351d20e97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2497,7 +2497,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5868016209758272826}
+    m_TransformParent: {fileID: 4402277925300830889}
     m_Modifications:
     - target: {fileID: 1811961337069766684, guid: 75ca44b6ad8e2e54e835803351d20e97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2542,10 +2542,6 @@ PrefabInstance:
     - target: {fileID: 2543587037072682355, guid: 75ca44b6ad8e2e54e835803351d20e97, type: 3}
       propertyPath: m_Name
       value: Enemy - Skeleton (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2543587037072682355, guid: 75ca44b6ad8e2e54e835803351d20e97, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

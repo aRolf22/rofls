@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1170648630585396715}
   - component: {fileID: 8262997348548640559}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Splatter_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

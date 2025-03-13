@@ -11,6 +11,9 @@ public class Room : MonoBehaviour
 
     [HideInInspector]
     public bool roomActive;
+
+    public GameObject mapHider;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -68,6 +71,8 @@ public class Room : MonoBehaviour
                 }
             }
             roomActive = true;
+
+            mapHider.SetActive(false);
         }
     }
     private void OnTriggerExit2D(Collider2D other)

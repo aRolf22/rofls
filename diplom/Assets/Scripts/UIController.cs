@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour
     private bool fadeToBlack, fadeOutBlack; // затухание и появление
 
     public string newGameScene, mainMenuScene;
-    public GameObject pauseMenu;
+    public GameObject pauseMenu, mapDisplay, bigMapText;
     private void Awake() 
     {
         instance = this;

@@ -832,16 +832,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1349925390336689459, guid: d628f28c5a2232c44a464ac0612715c8, type: 3}
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: distanceToEnd
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: gunRoomColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: gunRoomColor.b
-      value: 0.4528302
+      value: 0.0141509175
       objectReference: {fileID: 0}
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: gunRoomColor.g
-      value: 0.4528302
+      value: 0.3710719
       objectReference: {fileID: 0}
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: gunRoomColor.r
-      value: 0.4528302
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: includeGunRoom
@@ -861,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: maxDisnatceToGunRoom
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: minDisnatceToGunRoom
@@ -1053,6 +1061,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3739463146417612497, guid: 93ae4f610d63cae45b2108e2ac489046, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739463146417612497, guid: 93ae4f610d63cae45b2108e2ac489046, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739463146417612497, guid: 93ae4f610d63cae45b2108e2ac489046, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1069,6 +1089,18 @@ PrefabInstance:
     - target: {fileID: 4223105446287380527, guid: ab0972e4590fb2446858b31d8eb6b0ee, type: 3}
       propertyPath: m_Name
       value: Machine Gun Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623827546058970077, guid: ab0972e4590fb2446858b31d8eb6b0ee, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623827546058970077, guid: ab0972e4590fb2446858b31d8eb6b0ee, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623827546058970077, guid: ab0972e4590fb2446858b31d8eb6b0ee, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7315248828319392746, guid: ab0972e4590fb2446858b31d8eb6b0ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1153,7 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3911356168332037862, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -810.4
+      value: 810.4
       objectReference: {fileID: 0}
     - target: {fileID: 3911356168332037862, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1326,6 +1358,18 @@ PrefabInstance:
     - target: {fileID: 5529937843187327407, guid: 44874edd7fef8f342962b6e68ad42b2c, type: 3}
       propertyPath: m_Name
       value: Pistol Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721858963174634707, guid: 44874edd7fef8f342962b6e68ad42b2c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721858963174634707, guid: 44874edd7fef8f342962b6e68ad42b2c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721858963174634707, guid: 44874edd7fef8f342962b6e68ad42b2c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

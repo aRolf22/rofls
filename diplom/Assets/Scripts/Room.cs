@@ -23,6 +23,15 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ЧИТ ДЛЯ ДЕБАГА - Открыть всю карту
+        if (Input.GetKeyDown(KeyCode.Alpha0)) 
+        {
+            mapHider.SetActive(false);
+        }
+
+
+
+
         /*if(enemies.Count > 0 && roomActive && openWhenEnemiesCleared) 
         {
             for(int i = 0; i < enemies.Count; i++)

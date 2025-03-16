@@ -8,11 +8,14 @@ public class LevelGenerator : MonoBehaviour
 {
 
     public GameObject layoutRoom;
-    public Color startColor, endColor, shopColor;
+    public Color startColor, endColor, shopColor, gunRoomColor;
 
     public int distanceToEnd; // Сколько комнат нам надо
     public bool includeShop;
     public int minDisnatceToShop, maxDisnatceToShop;
+
+    public bool includeGunRoom;
+    public int minDisnatceToGunRoom, maxDisnatceToGunRoom;
 
     public Transform generatorPoint;
 
@@ -23,7 +26,7 @@ public class LevelGenerator : MonoBehaviour
 
     public LayerMask whatIsRoom;
 
-    private GameObject endRoom, shopRoom;
+    private GameObject endRoom, shopRoom, gunRoom;
 
     private List<GameObject> layoutRoomObjects = new List<GameObject>();
 
@@ -31,7 +34,7 @@ public class LevelGenerator : MonoBehaviour
 
     private List<GameObject> generatedOutlines = new List<GameObject>();
 
-    public RoomCenter centerStart, centerEnd, centerShop;
+    public RoomCenter centerStart, centerEnd, centerShop, centerGunRoom;
     public RoomCenter[] potentialCenters;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -64,6 +67,7 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+
         if(includeShop)
         {
             int shopSelector = Random.Range(minDisnatceToShop, maxDisnatceToShop + 1);
@@ -71,6 +75,15 @@ public class LevelGenerator : MonoBehaviour
             layoutRoomObjects.RemoveAt(shopSelector);
             shopRoom.GetComponent<SpriteRenderer>().color = shopColor;
         }
+
+        if(includeGunRoom)
+        {
+            int grSelector = Random.Range(minDisnatceToGunRoom, maxDisnatceToGunRoom + 1);
+            gunRoom = layoutRoomObjects[grSelector];
+            layoutRoomObjects.RemoveAt(grSelector);
+            gunRoom.GetComponent<SpriteRenderer>().color = gunRoomColor;
+        }
+
 
         // create room outlines
         CreateRoomOutline(Vector3.zero); // start room
@@ -83,6 +96,10 @@ public class LevelGenerator : MonoBehaviour
         if(includeShop)
         {
             CreateRoomOutline(shopRoom.transform.position);
+        }
+        if(includeGunRoom)
+        {
+            CreateRoomOutline(gunRoom.transform.position);
         }
 
         
@@ -104,15 +121,30 @@ public class LevelGenerator : MonoBehaviour
                 generateCenter = false;
             }
 
+
             if(includeShop)
             {
-               if (outline.transform.position == shopRoom.transform.position) 
-            {
-                Instantiate(centerShop, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+                if (outline.transform.position == shopRoom.transform.position) 
+                {
+                    Instantiate(centerShop, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
 
-                generateCenter = false;
+                    generateCenter = false;
+                }
             }
+
+            if(includeGunRoom)
+            {
+                if (outline.transform.position == gunRoom.transform.position) 
+                {
+                    Instantiate(centerGunRoom, outline.transform.position, transform.rotation).theRoom = outline.GetComponent<Room>();
+
+                    generateCenter = false;
+                }
             }
+
+
+
+
 
             if (generateCenter) 
             {

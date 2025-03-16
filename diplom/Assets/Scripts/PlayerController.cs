@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Dynamic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -18,11 +21,15 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
 
+/*
+// Стрельба
+// ПЕРЕНЕСЕНО В ОТДЕЛЬНЫЙ СКРИПТ "Gun"
     public GameObject bulletToFire;
     public Transform firePoint;
 
     public float timeBetweenShots; // кулдаун выстрела при зажатой ЛКМ
     private float shotCounter; 
+*/
 
     public SpriteRenderer bodySR;
 
@@ -38,7 +45,9 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] // ну выше ты уже написал зачем его юзают
     public bool canMove = true; // юзаем это чтобы не давать игроку двигаться (конкретно щас при выходе, реализовано в levelmanager в IEnumerator ставим false)
     
-    
+    public List<Gun> availableGuns = new List<Gun>(); // Список доступных оружий
+    [HideInInspector]
+    public int currentGun;
     
     
 
@@ -52,6 +61,9 @@ public class PlayerController : MonoBehaviour
         theCam = Camera.main; // Оно само найдёт камеру на сцене, у которой будет тэг "MainCamera", а этот тэг у камеры по дефолту
 
         activeMoveSpeed = moveSpeed;
+
+        UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
+        UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
     }
 
 
@@ -91,7 +103,8 @@ public class PlayerController : MonoBehaviour
         
 
             // Стрельба
-            if (Input.GetMouseButtonDown(0)) 
+            // ПЕРЕНЕСЕНО В ОТДЕЛЬНЫЙ СКРИПТ "Gun"
+            /*if (Input.GetMouseButtonDown(0)) 
             {
                 Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
                 shotCounter = timeBetweenShots; // без этой строчки будет появляться две пули почти одновременно. Одна в этом if, другая в следующем. Так что при создании этой пули сразу откатываем кулдаун
@@ -108,6 +121,25 @@ public class PlayerController : MonoBehaviour
                     shotCounter = timeBetweenShots;
                     
                     AudioManager.instance.PlaySFX(12); // звук Shoot1
+                }
+            }*/
+
+            // Смена оружия
+            if(Input.GetKeyDown(KeyCode.Tab)) 
+            {
+                if (availableGuns.Count > 0) // Если оружие одно, то при нажатии на tab оно просто будет меняться само на себя))0)0))0))000
+                {
+                    currentGun++;
+                    if (currentGun >= availableGuns.Count) 
+                    {
+                        currentGun = 0;
+                    }
+
+                    SwitchGun();
+                }
+                else 
+                {
+                    Debug.Log("У игрока нет оружия, такое вряд ли возможно в этой игре, но пусть такая ошибка будет лол");
                 }
             }
 
@@ -153,9 +185,24 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isMoving", false);
             }
-        } else { // делаем так чтобы игрок переставал двигаться в том направление, в котором  двигался до паузу (yield return new WaitForSeconds(waitToLoad); (это в levelmanager) )
+        } 
+        else 
+        { // делаем так чтобы игрок переставал двигаться в том направление, в котором  двигался до паузы (yield return new WaitForSeconds(waitToLoad); (это в levelmanager) )
             theRB.linearVelocity = Vector2.zero;
             anim.SetBool("isMoving", false);
         }
+    }
+
+
+    public void SwitchGun()
+    {
+        foreach(Gun theGun in availableGuns) // пробегаемся по всем оружиям, выключаем все
+        {
+            theGun.gameObject.SetActive(false);
+        }
+        availableGuns[currentGun].gameObject.SetActive(true); // потом включаем только один - следующий, к которому переключились
+
+        UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
+        UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
     }
 }

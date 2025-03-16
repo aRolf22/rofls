@@ -31,6 +31,14 @@ public class LevelManager : MonoBehaviour
         {
             PauseUnpause();
         }
+
+
+
+        // ЧИТ ДЛЯ ДЕБАГА - Получить 100 монет
+        if (Input.GetKeyDown(KeyCode.Alpha9)) 
+        {
+            GetCoins(100);
+        }
     }
     public IEnumerator LevelEnd() //для создания корутина (типо указывая IEnumerator, мы можем делать паузу в выполение метода при помощи yield return )
     {
@@ -40,6 +48,7 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(waitToLoad); // время чтобы насладиться победной музыкой
         SceneManager.LoadScene(nextLevel); // меняем сцену на след лвл
     }
+
     public void PauseUnpause()
     {
         if(!isPaused)

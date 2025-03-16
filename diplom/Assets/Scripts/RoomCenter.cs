@@ -38,5 +38,6 @@ public class RoomCenter : MonoBehaviour
                 theRoom.OpenDoors();
             }
         }
+
     }
 }

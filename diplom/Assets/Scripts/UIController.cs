@@ -17,6 +17,10 @@ public class UIController : MonoBehaviour
 
     public string newGameScene, mainMenuScene;
     public GameObject pauseMenu, mapDisplay, bigMapText;
+
+    public Image currentGun;
+    public Text gunText;
+
     private void Awake() 
     {
         instance = this;

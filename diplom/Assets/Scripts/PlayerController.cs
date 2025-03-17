@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Dynamic;
-using System.Threading;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -17,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform gunArm;
 
-    private Camera theCam;
+    //private Camera theCam;
 
     public Animator anim;
 
@@ -54,11 +52,12 @@ public class PlayerController : MonoBehaviour
     void Awake() 
     {
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
-        theCam = Camera.main; // Оно само найдёт камеру на сцене, у которой будет тэг "MainCamera", а этот тэг у камеры по дефолту
+        //theCam = Camera.main; // Оно само найдёт камеру на сцене, у которой будет тэг "MainCamera", а этот тэг у камеры по дефолту. УЖЕ НЕ НАЙДЕТ
 
         activeMoveSpeed = moveSpeed;
 
@@ -80,7 +79,7 @@ public class PlayerController : MonoBehaviour
             theRB.linearVelocity = moveInput * activeMoveSpeed;
 
             Vector3 mousePos = Input.mousePosition; // координаты курсора
-            Vector3 screenPoint = theCam.WorldToScreenPoint(transform.localPosition); // Переводим положение игрока в мире -> положение игрока в окне игры
+            Vector3 screenPoint = CameraController.instance.mainCamera.WorldToScreenPoint(transform.localPosition); // Переводим положение игрока в мире -> положение игрока в окне игры
 
             // Отзеркаливаем игрока, если координаты мыши левее координат игрока.
             if (mousePos.x < screenPoint.x) 

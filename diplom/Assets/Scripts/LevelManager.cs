@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
 
     public int currentCoins;
 
+    public Transform startPoint; // точка старта игрока
+
     private void Awake()
     {
         instance = this;
@@ -19,6 +21,10 @@ public class LevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        PlayerController.instance.transform.position = startPoint.position; // точка старта игрока
+        PlayerController.instance.canMove = true;
+        currentCoins = CharacterTracker.instance.currentCoins;
+
         Time.timeScale = 1f;
 
         UIController.instance.coinText.text = currentCoins.ToString();
@@ -46,6 +52,11 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.canMove = false;
         UIController.instance.StartFadeToBlack(); // затухание экрана
         yield return new WaitForSeconds(waitToLoad); // время чтобы насладиться победной музыкой
+
+        CharacterTracker.instance.currentCoins = currentCoins; // перенос монет на след лвл
+        CharacterTracker.instance.currentHealth = PlayerHealthController.instance.currentHealth; // перенос хп на след лвл
+        CharacterTracker.instance.maxHealth = PlayerHealthController.instance.maxHealth; // перенос макс хп на след лвл
+
         SceneManager.LoadScene(nextLevel); // меняем сцену на след лвл
     }
 

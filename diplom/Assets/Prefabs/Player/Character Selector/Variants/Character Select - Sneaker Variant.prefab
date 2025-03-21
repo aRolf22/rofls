@@ -52,9 +52,17 @@ PrefabInstance:
       propertyPath: playerToSpawn
       value: 
       objectReference: {fileID: 4542697124236426180, guid: c5074241998558142b4bb000ecf27ac9, type: 3}
+    - target: {fileID: 3986189088667790758, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
       propertyPath: m_Name
       value: Character Select - Sneaker Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
       propertyPath: m_IsActive
@@ -76,10 +84,18 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 6963966402370360686, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 8537036254774032155, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
       propertyPath: playerToSpawn
       value: 
       objectReference: {fileID: 4542697124236426180, guid: c5074241998558142b4bb000ecf27ac9, type: 3}
+    - target: {fileID: 8791756055658763109, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8537036254774032155, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
     m_RemovedGameObjects: []

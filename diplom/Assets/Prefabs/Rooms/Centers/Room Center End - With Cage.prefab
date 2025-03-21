@@ -2352,9 +2352,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5021152062804733108}
     m_Modifications:
+    - target: {fileID: 536410436947538928, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870000285446419535, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1921461890131188637, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
       propertyPath: m_Name
       value: Character Cage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921461890131188637, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073167008071607378, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835448553287753584, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255221488402681521, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7311687679233555968, guid: 6332323f9d99c5a448e3bb3d28df7ffb, type: 3}
       propertyPath: m_LocalPosition.x

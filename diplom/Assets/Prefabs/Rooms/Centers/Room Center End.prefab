@@ -2355,6 +2355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 408618800230860418, guid: 70fa2a1058f3e9a448a24e8718af5bf0, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1884397956100119136, guid: 70fa2a1058f3e9a448a24e8718af5bf0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2394,6 +2398,10 @@ PrefabInstance:
     - target: {fileID: 1884397956100119136, guid: 70fa2a1058f3e9a448a24e8718af5bf0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895978150258018850, guid: 70fa2a1058f3e9a448a24e8718af5bf0, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6631393207924918120, guid: 70fa2a1058f3e9a448a24e8718af5bf0, type: 3}
       propertyPath: m_SortingLayer

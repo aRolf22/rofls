@@ -48,9 +48,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3986189088667790758, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
       propertyPath: m_Name
       value: Character Select - Ninja Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963966402370360686, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791756055658763109, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

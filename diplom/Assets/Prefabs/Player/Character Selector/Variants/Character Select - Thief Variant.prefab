@@ -52,9 +52,17 @@ PrefabInstance:
       propertyPath: playerToSpawn
       value: 
       objectReference: {fileID: 2764893541451425673, guid: 6dd16a08df6fcf04fb5f1e5d73cc499a, type: 3}
+    - target: {fileID: 3986189088667790758, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
       propertyPath: m_Name
       value: Character Select - Thief Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4292168830568543572, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
       propertyPath: m_IsActive
@@ -67,6 +75,14 @@ PrefabInstance:
     - target: {fileID: 5335891844627165645, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
       propertyPath: m_Text
       value: Thief
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963966402370360686, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791756055658763109, guid: 318656fae0acb4446938354ba4e2d1b1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

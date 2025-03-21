@@ -766,6 +766,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
+      propertyPath: centerEnd
+      value: 
+      objectReference: {fileID: 1038692454368700349, guid: bd675a1b75720e144bb0afab771fb635, type: 3}
+    - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: centerShop
       value: 
       objectReference: {fileID: 6506699483864498702, guid: bcfb73bbba33d6640ab972a107772200, type: 3}
@@ -860,7 +864,7 @@ PrefabInstance:
     - target: {fileID: 7589464164671742794, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: 'potentialCenters.Array.data[6]'
       value: 
-      objectReference: {fileID: 1349925390336689459, guid: d628f28c5a2232c44a464ac0612715c8, type: 3}
+      objectReference: {fileID: 1038692454368700349, guid: bd675a1b75720e144bb0afab771fb635, type: 3}
     - target: {fileID: 8141646044961369941, guid: 9dc2b51057eb09442b4bd2b69f95114e, type: 3}
       propertyPath: m_Name
       value: Level Generator

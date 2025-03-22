@@ -26,12 +26,6 @@ public class PlayerBullet : MonoBehaviour
     {
         Instantiate(impactEffect, transform.position, transform.rotation); // Спавним эффект удара в месте попадания пули
         
-        if (other.tag == "PlayerBullet") //
-        {                               //
-                                        //
-        }                               //
-        else                            //
-        {                                //
             Destroy(gameObject); // Уничтожаем саму пулю
 
             AudioManager.instance.PlaySFX(4);    // звук Impact
@@ -40,7 +34,14 @@ public class PlayerBullet : MonoBehaviour
             {
                 other.GetComponent<EnemyController>().DamageEnemy(damageToGive); // Вызываем у EnemyController метод DamageEnemy
             }
-        }                                   //
+
+            if (other.tag == "Boss")
+            {
+                BossController.instance.TakeDamage(damageToGive);
+
+                Instantiate(BossController.instance.hitEffect, transform.position, transform.rotation);
+            }
+
     }
 
     void OnBecameInvisible() 

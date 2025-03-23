@@ -1026,7 +1026,7 @@ PrefabInstance:
       objectReference: {fileID: 5302838452874879959}
     - target: {fileID: 3878966410799537579, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: newGameScene
-      value: Level 1
+      value: Character Select
       objectReference: {fileID: 0}
     - target: {fileID: 3911356168332037862, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: m_SizeDelta.x

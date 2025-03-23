@@ -1,4 +1,3 @@
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class CharacterUnlockCage : MonoBehaviour

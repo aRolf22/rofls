@@ -156,10 +156,7 @@ public class LevelGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) 
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+       
     }
 
     public void MoveGenerationPoint() // Передвигаем точку спавна следующей комнаты 

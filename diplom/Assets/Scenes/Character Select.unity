@@ -5286,7 +5286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2068343797800883551, guid: ef3058fda96c5d7489ceb81788042aa2, type: 3}
       propertyPath: nextLevel
-      value: Level 1
+      value: Boss 1
       objectReference: {fileID: 0}
     - target: {fileID: 2068343797800883551, guid: ef3058fda96c5d7489ceb81788042aa2, type: 3}
       propertyPath: startPoint

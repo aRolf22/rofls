@@ -76,6 +76,7 @@ public class BossController : MonoBehaviour
                     foreach(Transform t  in actions[currentAction].shotPoints)
                     {
                         Instantiate(actions[currentAction].itemToShoot, t.position, t.rotation);
+                        AudioManager.instance.PlaySFX(13); 
                     }
 
                 }

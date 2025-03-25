@@ -169,3 +169,4 @@ MonoBehaviour:
   theRB: {fileID: 4827852225609430099}
   impactEffect: {fileID: 3906643056950189461, guid: f5f437a371f66b94a98edac5990e851e, type: 3}
   damageToGive: 30
+  lifetime: 0.5

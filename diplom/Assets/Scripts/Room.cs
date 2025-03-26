@@ -23,10 +23,10 @@ public class Room : MonoBehaviour
     void Update()
     {
         // ЧИТ ДЛЯ ДЕБАГА - Открыть всю карту
-       // if (Input.GetKeyDown(KeyCode.Alpha0)) 
-       // {
-      //      mapHider.SetActive(false);
-      //  }
+        if (Input.GetKeyDown(KeyCode.Alpha0)) 
+        {
+            mapHider.SetActive(false);
+        }
 
 
 

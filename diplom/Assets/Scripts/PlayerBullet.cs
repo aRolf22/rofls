@@ -49,6 +49,15 @@ public class PlayerBullet : MonoBehaviour
         }
     }
 
+    void OnTriggerStay2D(Collider2D other)
+    {
+        
+        if (other.tag == "RoomTilemap")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnBecameInvisible() 
     {
         Destroy(gameObject); 

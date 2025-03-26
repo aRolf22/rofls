@@ -41,10 +41,10 @@ public class LevelManager : MonoBehaviour
 
 
         // ЧИТ ДЛЯ ДЕБАГА - Получить 100 монет
-       /// if (Input.GetKeyDown(KeyCode.Alpha9)) 
-      ///  {
-            ///GetCoins(100);
-      ///  }
+        if (Input.GetKeyDown(KeyCode.Alpha9)) 
+        {
+            GetCoins(100);
+        }
     }
     public IEnumerator LevelEnd() //для создания корутина (типо указывая IEnumerator, мы можем делать паузу в выполение метода при помощи yield return )
     {

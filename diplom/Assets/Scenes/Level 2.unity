@@ -1016,6 +1016,22 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1860568232058300886, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
+      propertyPath: m_Text
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860568232058300886, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768307868734794005, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030664570642193304, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3878966410799537579, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: gunText
       value: 
@@ -1118,15 +1134,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4887043361940058787, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4887043361940058787, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5302696401239255031, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318452578163498255, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817433855200550720, guid: f76bdf31a6b14014d961a19310648fc8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 298
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -56,6 +56,8 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        fireCounter = fireRate-1;
+
         if(shouldWander)
         {
              pauseConunter = Random.Range(pauseLength * .75f, pauseLength * 1.25f);

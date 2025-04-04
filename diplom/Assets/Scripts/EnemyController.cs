@@ -56,7 +56,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        fireCounter = fireRate-1;
+        fireCounter = fireRate;
 
         if(shouldWander)
         {

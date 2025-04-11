@@ -706,12 +706,12 @@ LineRenderer:
       m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
-    alignment: 1
+    numCornerVertices: 5
+    numCapVertices: 5
+    alignment: 0
     textureMode: 1
     textureScale: {x: 1, y: 1}
-    shadowBias: 0.5
+    shadowBias: 1.6
     generateLightingData: 0
   m_MaskInteraction: 0
   m_UseWorldSpace: 1

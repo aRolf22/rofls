@@ -52,7 +52,7 @@ Material:
     - _Cull: 2
     - _DstBlend: 1
     - _GradientNoise: 10
-    - _MaskPower: 4
+    - _MaskPower: 2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SimpleNoise: 30
@@ -63,7 +63,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 2, g: 1.645653, b: 0, a: 1}
+    - _Color: {r: 1.4980392, g: 1.2326264, b: 0, a: 1}
     - _SpeadNoise: {r: 0, g: 0.2, b: 0, a: 0}
     - _Tilling: {r: 8, g: 8, b: 0, a: 0}
   m_BuildTextureStacks: []

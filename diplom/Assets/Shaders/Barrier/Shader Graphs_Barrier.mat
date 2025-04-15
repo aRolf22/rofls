@@ -8,21 +8,17 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader Graphs_Barrier
-  m_Shader: {fileID: -6465566751694194690, guid: bd269ca4133e9524bad3e10532eb75e7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 2fca15d509d46a648a254c05881593a7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
-  disabledShaderPasses:
-  - DepthOnly
-  - MOTIONVECTORS
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -45,30 +41,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0
-    - _AlphaToMask: 0
-    - _Blend: 2
-    - _CastShadows: 1
-    - _Cull: 2
-    - _DstBlend: 1
     - _GradientNoise: 10
-    - _MaskPower: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
+    - _MaskPower: 1
     - _SimpleNoise: 30
     - _Size: 0.8
-    - _SrcBlend: 5
-    - _Surface: 1
-    - _ZTest: 4
-    - _ZWrite: 0
-    - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 1.4980392, g: 1.2326264, b: 0, a: 1}
+    - _Color: {r: 2, g: 1.645653, b: 0, a: 1}
     - _SpeadNoise: {r: 0, g: 0.2, b: 0, a: 0}
     - _Tilling: {r: 8, g: 8, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3678283963302924849
+--- !u!114 &8285750878062622999
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

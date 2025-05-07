@@ -1,13 +1,6 @@
-diplom_v0.2/Temp/workerlic
-diplom_v0.2/Temp/UnityLockfile
-diplom_v0.2/Temp/__Backupscenes/0.backup
-diplom_v0.2/Temp/FSTimeGet-039bf4e3e23ec8a449dbadca92888823
-diplom_v0.2/Temp/FSTimeGet-03a5ea7cdd2af1f4588eef579a8591f5
-diplom_v0.2/Temp/FSTimeGet-53697d019f87433458e89af4a1ae5d9e
-diplom_v0.2/Temp/FSTimeGet-ff29f5e8c057a3645b153ed3c708534e
 # This .gitignore file should be placed at the root of your Unity project directory
 #
-# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 /[Ll]ibrary/
 /[Tt]emp/
@@ -21,8 +14,8 @@ diplom_v0.2/Temp/FSTimeGet-ff29f5e8c057a3645b153ed3c708534e
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-# Recordings can get excessive in size
-/[Rr]ecordings/
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+!/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -64,10 +57,7 @@ sysinfo.txt
 
 # Builds
 *.apk
-*.aab
 *.unitypackage
-*.unitypackage.meta
-*.app
 
 # Crashlytics generated file
 crashlytics-build.properties

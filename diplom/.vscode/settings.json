@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "diplom_v0.2.sln"
+    "dotnet.defaultSolution": "diplom.sln"
 }

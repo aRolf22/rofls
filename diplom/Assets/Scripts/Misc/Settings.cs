@@ -6,6 +6,10 @@ using System;
 
 public static class Settings
 {
+    #region DUNGEON BUILD SETTINGS
+    public const int maxDungeonRebuildAttemptsForRoomGraph = 1000;
+    public const int maxDungeonBuildAttempts = 10;
+    #endregion
 
     #region ROOM SETTINGS
     public const float fadeInTime = 0.5f; // time to fade in the room

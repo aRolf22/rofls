@@ -460,9 +460,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: -0.29411766
+    y: -0.4375
     width: 1
-    height: 1.5882354
+    height: 1.875
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -571,6 +571,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1990707611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1990707613}
+  - component: {fileID: 1990707612}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1990707612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990707611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df35bf98da70cd74d853a3a8e660506e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dungeonLevelList:
+  - {fileID: 11400000, guid: 36239673d36b5c945bfb69d565c1190a, type: 2}
+  - {fileID: 11400000, guid: 000cb6afa5153b04794a101dc7b3aa94, type: 2}
+  - {fileID: 11400000, guid: 7f9eff29a352b6f4481a4a3c56752e0f, type: 2}
+  - {fileID: 11400000, guid: e065a2c767da0d44c8afcfad568d092c, type: 2}
+  - {fileID: 11400000, guid: bfc7489ca3e481f4aa7a8272497d8abd, type: 2}
+  - {fileID: 11400000, guid: 5b03fc6ca549f8c4e806dc1f3e2d521f, type: 2}
+  currentDungeonLevelListIndex: 0
+  gameState: 0
+--- !u!4 &1990707613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990707611}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -580,3 +633,4 @@ SceneRoots:
   - {fileID: 290966410}
   - {fileID: 1730666839}
   - {fileID: 143297153}
+  - {fileID: 1990707613}

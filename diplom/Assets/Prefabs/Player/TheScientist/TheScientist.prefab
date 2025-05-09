@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3506493264999219860
+--- !u!1001 &9006989508912002710
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -35,50 +35,38 @@ PrefabInstance:
     - target: {fileID: 1858216727843814003, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d06a4c6675a50e0499105d5f4715b651, type: 3}
+      objectReference: {fileID: 21300000, guid: 2788b711f80a9194096a03ef26a440cb, type: 3}
     - target: {fileID: 1858216727843814003, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2203480935550923827, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203480935550923827, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203480935550923827, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.75
-      objectReference: {fileID: 0}
     - target: {fileID: 2773405806715103008, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: fb0cc3b02f662c74f941f11193bb2c27, type: 2}
+      objectReference: {fileID: 9100000, guid: e52ed9234b488b0449570da9e57ce474, type: 2}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.5
+      value: 0.18444446
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
+      value: 0.37008545
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.25
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.25
+      value: 0.6875
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.25
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.25
+      value: 0.6875
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
@@ -95,14 +83,14 @@ PrefabInstance:
     - target: {fileID: 4493077096685019965, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d06a4c6675a50e0499105d5f4715b651, type: 3}
+      objectReference: {fileID: 21300000, guid: 2788b711f80a9194096a03ef26a440cb, type: 3}
     - target: {fileID: 4493077096685019965, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4756592257433437666, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_Name
-      value: TheThief
+      value: Player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5165649266937487380, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -144,26 +132,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5622519623048509001, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5622519623048509001, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5622519623048509001, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.75
-      objectReference: {fileID: 0}
     - target: {fileID: 8124260735130163437, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2200474710894333254, guid: 792761d9a2ee9904c8d0d63e0a897bac, type: 3}
-    - target: {fileID: 8124260735130163437, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2887896937163043261, guid: ffa25ab59b41d9d4abbfe10d88fea3d7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

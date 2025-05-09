@@ -26,12 +26,12 @@ public class CinemachineTarget : MonoBehaviour
     private void SetCinemachineTargetGroup()
     {
         // Create target group for cinemachine for the cinemachine camera to follow
-        CinemachineTargetGroup.Target cinemachineGroupTarget_player = new CinemachineTargetGroup.Target { weight = 1f, radius = 2.5f, target = GameManager.Instance.GetPlayer().transform };
+       /// CinemachineTargetGroup.Target cinemachineGroupTarget_player = new CinemachineTargetGroup.Target { weight = 1f, radius = 2.5f, target = GameManager.Instance.GetPlayer().transform };
 
 
-        CinemachineTargetGroup.Target[] cinemachineTargetArray = new CinemachineTargetGroup.Target[] { cinemachineGroupTarget_player };
+        //CinemachineTargetGroup.Target[] cinemachineTargetArray = new CinemachineTargetGroup.Target[] { cinemachineGroupTarget_player };
 
-        cinemachineTargetGroup.m_Targets = cinemachineTargetArray;
+       // cinemachineTargetGroup.m_Targets = cinemachineTargetArray;
 
     }
 

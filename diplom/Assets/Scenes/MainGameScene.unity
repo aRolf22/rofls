@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 790836893}
   - component: {fileID: 790836895}
   m_Layer: 0
-  m_Name: CinemachineTargeGroup
+  m_Name: CinemachineTargetGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

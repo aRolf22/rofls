@@ -31,7 +31,7 @@ public class CinemachineTarget : MonoBehaviour
 
         CinemachineTargetGroup.Target[] cinemachineTargetArray = new CinemachineTargetGroup.Target[] { cinemachineGroupTarget_player };
 
-        cinemachineTargetGroup.m_Targets = cinemachineTargetArray;
+        cinemachineTargetGroup.Targets = new List<CinemachineTargetGroup.Target> { cinemachineGroupTarget_player };
 
     }
 

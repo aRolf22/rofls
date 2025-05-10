@@ -52,33 +52,37 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.75
       objectReference: {fileID: 0}
+    - target: {fileID: 2451096475278854233, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 63ca70cc823eef64bbddb49c592928e8, type: 2}
     - target: {fileID: 2773405806715103008, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: fb0cc3b02f662c74f941f11193bb2c27, type: 2}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.5
+      value: 0.18444446
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
+      value: 0.37008545
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.25
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.25
+      value: 0.6875
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.25
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.25
+      value: 0.6875
       objectReference: {fileID: 0}
     - target: {fileID: 3210549221881738517, guid: 3a919c207b3f56941b22002996b4213b, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold

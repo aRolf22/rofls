@@ -26078,6 +26078,7 @@ GameObject:
   - component: {fileID: 29107400574049525}
   - component: {fileID: 2094413943165559848}
   - component: {fileID: -2916035068718853694}
+  - component: {fileID: -1531697564827936796}
   m_Layer: 12
   m_Name: MediumRoom_MyRooms_1
   m_TagString: Untagged
@@ -26158,6 +26159,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c49c4ea53e4123b4eb02721ec540684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  groundTilemap: {fileID: 0}
+  decoration1Tilemap: {fileID: 0}
+  decoration2Tilemap: {fileID: 0}
+  frontTilemap: {fileID: 0}
+  collisionTilemap: {fileID: 0}
+  minimapTilemap: {fileID: 0}
+  roomColliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!114 &-1531697564827936796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389396730089565549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d61103d6b2701643b118fa73d305672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1625049843543574806

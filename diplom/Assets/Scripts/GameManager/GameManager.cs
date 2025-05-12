@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -162,6 +162,16 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         return player;
     }
+
+    
+    /// <summary>
+    /// Get the player minimap icon
+    /// </summary>
+    public Sprite GetPlayerMiniMapIcon()
+    {
+        return playerDetails.playerMiniMapIcon;
+    }
+
 
     /// <summary>
     /// Get the current room the player is in

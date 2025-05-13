@@ -1430,7 +1430,7 @@ Camera:
   far clip plane: 1000
   field of view: 40
   orthographic: 1
-  orthographic size: 13.8125
+  orthographic size: 9.4375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2542,6 +2542,18 @@ MonoBehaviour:
   - poolSize: 40
     prefab: {fileID: 2179683295551632072, guid: 35e1ccaaa2ce75d4fbc9ad260e783f70, type: 3}
     componentType: SoundEffect
+  - poolSize: 20
+    prefab: {fileID: 7255582679228879866, guid: df3ab6642a81825408afd488e2e759b4, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 7853615770937549561, guid: db916bb7c7059c642adbd390f7ebd2a0, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 4845784685338801524, guid: 75e3bd14c62c1514391ff6d0415ce4e8, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 7853615770937549561, guid: 1e006a8ea6a0acb44ab5e88d73246615, type: 3}
+    componentType: AmmoHitEffect
 --- !u!4 &1978428537
 Transform:
   m_ObjectHideFlags: 0

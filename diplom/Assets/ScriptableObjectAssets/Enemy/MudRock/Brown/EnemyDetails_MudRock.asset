@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1509d70b2dbb1514d8d3fd261fe3339b, type: 3}
+  m_Name: EnemyDetails_MudRock
+  m_EditorClassIdentifier: 
+  enemyName: MudRock
+  enemyPrefab: {fileID: 3878129451756692461, guid: c44a5b6c250a9494887feb97b5f2a315, type: 3}

@@ -14,3 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: MudRock
   enemyPrefab: {fileID: 3878129451756692461, guid: c44a5b6c250a9494887feb97b5f2a315, type: 3}
+  chaseDistance: 50
+  enemyStandardMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  enemyMaterializeTime: 3
+  enemyMaterializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
+  enemyMaterializeColor: {r: 0.84298223, g: 8.47419, b: 0, a: 1}
+  enemyWeapon: {fileID: 11400000, guid: 613a9e92f57066f4f9e90ccfa20257e9, type: 2}
+  firingIntervalMin: 1
+  firingIntervalMax: 1.5
+  firingDurationMin: 6
+  firingDurationMax: 8
+  firingLineOfSightRequired: 1

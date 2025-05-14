@@ -33,6 +33,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private Player player;
 
     [HideInInspector] public GameState gameState;
+    [HideInInspector] public GameState previousGameState;
 
     protected override void Awake()
         {
@@ -90,6 +91,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        previousGameState = GameState.gameStarted;
         gameState = GameState.gameStarted;
     }
 
@@ -181,6 +183,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         return currentRoom;
     }
 
+
+    /// <summary>
+    /// Get the current dungeon level
+    /// </summary>
+    public DungeonLevelSO GetCurrentDungeonLevel()
+    {
+        return dungeonLevelList[currentDungeonLevelListIndex];
+    }
 
     #region Validation
 

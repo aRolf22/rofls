@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3325795330854846064, guid: e54f89933c0599d41b735b3202217628, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: b187eb8908d436a4697eb48a8d94a05c, type: 2}
     - target: {fileID: 325123463568389301, guid: e54f89933c0599d41b735b3202217628, type: 3}
       propertyPath: m_Name
       value: SlimeBlock_Blue
@@ -148,6 +152,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7941784603700773525, guid: e54f89933c0599d41b735b3202217628, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 935518c24db476f419e6f2d1f5f6cbdb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

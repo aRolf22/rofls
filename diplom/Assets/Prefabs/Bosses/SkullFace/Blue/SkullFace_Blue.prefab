@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3325795330854846064, guid: e54f89933c0599d41b735b3202217628, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ccc0b8bea5b69644b8bce45a960b5ca, type: 2}
     - target: {fileID: 325123463568389301, guid: e54f89933c0599d41b735b3202217628, type: 3}
       propertyPath: m_Name
       value: SkullFace_Blue
@@ -204,6 +208,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7941784603700773525, guid: e54f89933c0599d41b735b3202217628, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 744051c5775967e45b28662c328671f1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

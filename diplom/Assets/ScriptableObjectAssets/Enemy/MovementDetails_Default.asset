@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1509d70b2dbb1514d8d3fd261fe3339b, type: 3}
-  m_Name: EnemyDetails_MudRock
+  m_Script: {fileID: 11500000, guid: 5d3932e46f3383e4e83e3283097fb95b, type: 3}
+  m_Name: MovementDetails_Default
   m_EditorClassIdentifier: 
-  enemyName: MudRock
-  enemyPrefab: {fileID: 3878129451756692461, guid: c44a5b6c250a9494887feb97b5f2a315, type: 3}
+  minMoveSpeed: 1
+  maxMoveSpeed: 1.5
+  rollSpeed: 0
+  rollDistance: 0
+  rollCooldownTime: 0

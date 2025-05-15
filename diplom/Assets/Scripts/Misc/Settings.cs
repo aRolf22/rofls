@@ -19,6 +19,7 @@ public static class Settings
     #region ROOM SETTINGS
     public const float fadeInTime = 0.5f; // time to fade in the room
     public const int maxChildCorridors = 3; // Max number of child corridors leading from a room. - maximum should be 3 although this is not recommended since it can cause the dungeon building to fail since the rooms are more likely to not fit together;
+    public const float doorUnlockDelay = 1f;
     #endregion
 
     #region ANIMATOR PARAMETERS
@@ -62,7 +63,16 @@ public static class Settings
     public const float enemyPathRebuildCooldown = 2f;
     #endregion
 
+    #region ENEMY PARAMETERS
+    public const int defaultEnemyHealth = 20;
+    #endregion
+
     #region UI PARAMETERS
+    public const float uiHeartSpacing = 16f;
     public const float uiAmmoIconSpacing = 4f;
+    #endregion
+
+    #region CONTACT DAMAGE PARAMETERS
+    public const float contactDamageCollisionResetDelay = 0.5f;
     #endregion
 }

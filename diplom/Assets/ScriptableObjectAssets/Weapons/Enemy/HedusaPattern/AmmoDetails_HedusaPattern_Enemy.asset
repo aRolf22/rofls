@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65acfbe7a1edcb6408a24f58c49efbdb, type: 3}
+  m_Name: AmmoDetails_HedusaPattern_Enemy
+  m_EditorClassIdentifier: 
+  ammoName: Hedusa Pattern Ammo
+  isPlayerAmmo: 0
+  ammoSprite: {fileID: 21300000, guid: e36e8bbd18074d341b170885ac002038, type: 3}
+  ammoPrefabArray:
+  - {fileID: 7081589295934947801, guid: d65f27d70c71bb24d967a7f14b844105, type: 3}
+  - {fileID: 4920926137728732716, guid: 4a052899b1ce528488c9cf950a64cca8, type: 3}
+  ammoMaterial: {fileID: 2100000, guid: 33a55999e44f4724191171c59fc64319, type: 2}
+  ammoChargeTime: 0.5
+  ammoChargeMaterial: {fileID: 2100000, guid: c64696a09f1cb1a4d9766d1fe9778ca5, type: 2}
+  ammoHitEffect: {fileID: 11400000, guid: eaa12c50078b4e44b97072609efbbd9e, type: 2}
+  ammoDamage: 5
+  ammoSpeedMin: 7
+  ammoSpeedMax: 12
+  ammoRange: 30
+  ammoRotationSpeed: 120
+  ammoSpreadMin: 1
+  ammoSpreadMax: 2
+  ammoSpawnAmountMin: 1
+  ammoSpawnAmountMax: 1
+  ammoSpawnIntervalMin: 0
+  ammoSpawnIntervalMax: 0
+  isAmmoTrail: 0
+  ammoTrailTime: 0
+  ammoTrailMaterial: {fileID: 0}
+  ammoTrailStartWidth: 0
+  ammoTrailEndWidth: 0

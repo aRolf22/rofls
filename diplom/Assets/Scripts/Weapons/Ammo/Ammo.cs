@@ -18,7 +18,7 @@ public class Ammo : MonoBehaviour, IFireable
     private bool isAmmoMaterialSet = false;
     private bool overrideAmmoMovement;
     private bool isColliding = false;
-    
+
     private void Awake()
     {
         // cache sprite renderer
@@ -57,7 +57,7 @@ public class Ammo : MonoBehaviour, IFireable
                     // no multiplier
                     StaticEventHandler.CallMultiplierEvent(false);
                 }
-                
+
                 DisableAmmo();
             }
         }
@@ -65,10 +65,10 @@ public class Ammo : MonoBehaviour, IFireable
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {   
+    {
         // If already colliding with something return
         if (isColliding) return;
-        
+
         // Deal Damage To Collision Object
         DealDamage(collision);
 
@@ -78,7 +78,7 @@ public class Ammo : MonoBehaviour, IFireable
         DisableAmmo();
     }
 
-        private void DealDamage(Collider2D collision)
+    private void DealDamage(Collider2D collision)
     {
         Health health = collision.GetComponent<Health>();
 
@@ -114,6 +114,7 @@ public class Ammo : MonoBehaviour, IFireable
         }
 
     }
+
 
     /// <summary>
     /// Initialise the ammo being fired - using the ammodetails, the aimangle, weaponAngle, and
@@ -226,7 +227,6 @@ public class Ammo : MonoBehaviour, IFireable
         gameObject.SetActive(false);
     }
 
-
     /// <summary>
     /// Display the ammo hit effect
     /// </summary>
@@ -246,6 +246,7 @@ public class Ammo : MonoBehaviour, IFireable
             ammoHitEffect.gameObject.SetActive(true);
         }
     }
+
 
     public void SetAmmoMaterial(Material material)
     {

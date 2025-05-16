@@ -98,7 +98,6 @@ public static class AStar
         return movementPathStack;
     }
 
-
     /// <summary>
     /// Evaluate neighbour nodes
     /// </summary>
@@ -123,12 +122,10 @@ public static class AStar
                     // Calculate new gcost for neighbour
                     int newCostToNeighbour;
 
-
                     // Get the movement penalty
                     // Unwalkable paths have a value of 0. Default movement penalty is set in
                     // Settings and applies to other grid squares.
                     int movementPenaltyForGridSpace = instantiatedRoom.aStarMovementPenalty[validNeighbourNode.gridPosition.x, validNeighbourNode.gridPosition.y];
-
 
                     newCostToNeighbour = currentNode.gCost + GetDistance(currentNode, validNeighbourNode) + movementPenaltyForGridSpace;
 
@@ -150,7 +147,7 @@ public static class AStar
         }
     }
 
-    
+
     /// <summary>
     /// Returns the distance int between nodeA and nodeB
     /// </summary>
@@ -182,8 +179,12 @@ public static class AStar
         // check for obstacle at that position
         int movementPenaltyForGridSpace = instantiatedRoom.aStarMovementPenalty[neighbourNodeXPosition, neighbourNodeYPosition];
 
+        // check for moveable obstacle at that position
+        int itemObstacleForGridSpace = instantiatedRoom.aStarItemObstacles[neighbourNodeXPosition, neighbourNodeYPosition];
+
+
         // if neighbour is an obstacle or neighbour is in the closed list then skip
-        if (movementPenaltyForGridSpace == 0 || closedNodeHashSet.Contains(neighbourNode))
+        if (movementPenaltyForGridSpace == 0 || itemObstacleForGridSpace == 0 || closedNodeHashSet.Contains(neighbourNode))
         {
             return null;
         }
@@ -191,5 +192,6 @@ public static class AStar
         {
             return neighbourNode;
         }
+
     }
 }

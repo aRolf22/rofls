@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d35a87a90718ce48aaa4e2978a088a8, type: 3}
+  m_Name: WeaponDetails_HocusPlasmus_Enemy
+  m_EditorClassIdentifier: 
+  weaponName: HocusPlasmus Pattern
+  weaponSprite: {fileID: 21300000, guid: 14929ad3eca0ef941a96820c56a5deba, type: 3}
+  weaponShootPosition: {x: 0.688, y: 0.312, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 6f6382c333b2bb944b757085b80ec84a, type: 2}
+  weaponShootEffect: {fileID: 11400000, guid: 8811850ed5e805045a7c541665782af5, type: 2}
+  weaponFiringSoundEffect: {fileID: 11400000, guid: 9acca63afdb424a43a177cc3abc06b02, type: 2}
+  weaponReloadingSoundEffect: {fileID: 0}
+  hasInfiniteAmmo: 1
+  hasInfiniteClipCapacity: 1
+  weaponClipAmmoCapacity: 0
+  weaponAmmoCapacity: 0
+  weaponFireRate: 3
+  weaponPrechargeTime: 0
+  weaponReloadTime: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+
 #region REQUIRE COMPONENTS
 [RequireComponent(typeof(HealthEvent))]
 [RequireComponent(typeof(Health))]
@@ -36,6 +37,9 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Rigidbody2D))]
 [DisallowMultipleComponent]
 #endregion REQUIRE COMPONENTS
+
+
+
 public class Player : MonoBehaviour
 {
     [HideInInspector] public PlayerDetailsSO playerDetails;
@@ -73,13 +77,13 @@ public class Player : MonoBehaviour
         setActiveWeaponEvent = GetComponent<SetActiveWeaponEvent>();
         activeWeapon = GetComponent<ActiveWeapon>();
         weaponFiredEvent = GetComponent<WeaponFiredEvent>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         reloadWeaponEvent = GetComponent<ReloadWeaponEvent>();
         weaponReloadedEvent = GetComponent<WeaponReloadedEvent>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
 
-    
+
     /// <summary>
     /// Initialize the player
     /// </summary>
@@ -90,11 +94,12 @@ public class Player : MonoBehaviour
         //Create player starting weapons
         CreatePlayerStartingWeapons();
 
+
         // Set player starting health
         SetPlayerHealth();
     }
 
-        private void OnEnable()
+    private void OnEnable()
     {
         // Subscribe to player health event
         healthEvent.OnHealthChanged += HealthEvent_OnHealthChanged;
@@ -110,7 +115,7 @@ public class Player : MonoBehaviour
     /// Handle health changed event
     /// </summary>
     private void HealthEvent_OnHealthChanged(HealthEvent healthEvent, HealthEventArgs healthEventArgs)
-    {   
+    {
         // If player has died
         if (healthEventArgs.healthAmount <= 0f)
         {
@@ -118,6 +123,7 @@ public class Player : MonoBehaviour
         }
 
     }
+
 
     /// <summary>
     /// Set the player starting weapon
@@ -151,7 +157,8 @@ public class Player : MonoBehaviour
         return transform.position;
     }
 
-    // <summary>
+
+    /// <summary>
     /// Add a weapon to the player weapon dictionary
     /// </summary>
     public Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
@@ -171,4 +178,18 @@ public class Player : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// Returns true if the weapon is held by the player - otherwise returns false
+    /// </summary>
+    public bool IsWeaponHeldByPlayer(WeaponDetailsSO weaponDetails)
+    {
+
+        foreach (Weapon weapon in weaponList)
+        {
+            if (weapon.weaponDetails == weaponDetails) return true;
+        }
+
+        return false;
+    }
 }

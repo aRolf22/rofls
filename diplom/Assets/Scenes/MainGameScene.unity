@@ -1726,7 +1726,7 @@ Camera:
   far clip plane: 1000
   field of view: 40
   orthographic: 1
-  orthographic size: 22.5
+  orthographic size: 8.4375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1929,7 +1929,7 @@ Camera:
   far clip plane: 1000
   field of view: 40
   orthographic: 1
-  orthographic size: 7.078125
+  orthographic size: 8.546875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3155,6 +3155,21 @@ MonoBehaviour:
     componentType: AmmoHitEffect
   - poolSize: 200
     prefab: {fileID: 6233570492967170856, guid: 1f009ca52a2e6764495298779136ccfb, type: 3}
+    componentType: IFireable
+  - poolSize: 10
+    prefab: {fileID: 6147691360986010773, guid: 1b7ab783293db0d47ad7c0b6014f8a3c, type: 3}
+    componentType: IFireable
+  - poolSize: 10
+    prefab: {fileID: 1435015112011607560, guid: 138ed28256efbef4e803edbcd85416fc, type: 3}
+    componentType: IFireable
+  - poolSize: 10
+    prefab: {fileID: 6416628339695017583, guid: 421d681772e50434fafaf1d55207753d, type: 3}
+    componentType: IFireable
+  - poolSize: 10
+    prefab: {fileID: 7081589295934947801, guid: d65f27d70c71bb24d967a7f14b844105, type: 3}
+    componentType: IFireable
+  - poolSize: 10
+    prefab: {fileID: 4920926137728732716, guid: 4a052899b1ce528488c9cf950a64cca8, type: 3}
     componentType: IFireable
 --- !u!4 &1978428537
 Transform:

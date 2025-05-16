@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
         player = GetComponent<Player>();
         enemy = GetComponent<Enemy>();
 
-        
+
         // Get player / enemy hit immunity details
         if (player != null)
         {
@@ -74,7 +74,6 @@ public class Health : MonoBehaviour
         }
     }
 
-  
     /// <summary>
     /// Public method called when damage is taken
     /// </summary>
@@ -92,7 +91,7 @@ public class Health : MonoBehaviour
 
             PostHitImmunity();
 
-            // Обновляем количество ХП в полоске ХП
+            // Set health bar as the percentage of health remaining
             if (healthBar != null)
             {
                 healthBar.SetHealthBarValue((float)currentHealth / (float)startingHealth);
@@ -121,7 +120,7 @@ public class Health : MonoBehaviour
 
     }
 
-     /// <summary>
+    /// <summary>
     /// Coroutine to indicate a hit and give some post hit immunity
     /// </summary>
     private IEnumerator PostHitImmunityRoutine(float immunityTime, SpriteRenderer spriteRenderer)
@@ -172,6 +171,27 @@ public class Health : MonoBehaviour
     public int GetStartingHealth()
     {
         return startingHealth;
+    }
+
+    /// <summary>
+    /// Increase health by specified percent
+    /// </summary>
+    public void AddHealth(int healthPercent)
+    {
+        int healthIncrease = Mathf.RoundToInt((startingHealth * healthPercent) / 100f);
+
+        int totalHealth = currentHealth + healthIncrease;
+
+        if (totalHealth > startingHealth)
+        {
+            currentHealth = startingHealth;
+        }
+        else
+        {
+            currentHealth = totalHealth;
+        }
+
+        CallHealthEvent(0);
     }
 
 }

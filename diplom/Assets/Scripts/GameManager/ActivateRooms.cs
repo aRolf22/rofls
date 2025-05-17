@@ -22,9 +22,10 @@ public class ActivateRooms : MonoBehaviour
 
     private void EnableRooms()
     {
-        // if currently showing the dungeon map UI don't process
+        // Если сейчас показывается карта на полный экран, то НЕ грузим данные о комнатах.
         if (GameManager.Instance.gameState == GameState.dungeonOverviewMap)
             return;
+
 
         HelperUtilities.CameraWorldPositionBounds(out Vector2Int miniMapCameraWorldPositionLowerBounds, out Vector2Int miniMapCameraWorldPositionUpperBounds, miniMapCamera);
 

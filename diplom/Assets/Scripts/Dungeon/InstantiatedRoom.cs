@@ -346,6 +346,10 @@ public class InstantiatedRoom : MonoBehaviour
                     // lock the door to prevent access to the room  
                     doorComponent.LockDoor();
 
+                    // Спавним иконку босса на миникарте (на координатах входной двери)
+                    GameObject skullIcon = Instantiate(GameResources.Instance.minimapSkullPrefab, gameObject.transform);
+                    skullIcon.transform.localPosition = door.transform.localPosition;
+
                 }
             }
 

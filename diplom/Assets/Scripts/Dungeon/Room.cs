@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +7,8 @@ public class Room
     public string templateID;
     public GameObject prefab;
     public RoomNodeTypeSO roomNodeType;
+    public MusicTrackSO battleMusic;
+    public MusicTrackSO ambientMusic;
     public Vector2Int lowerBounds;
     public Vector2Int upperBounds;
     public Vector2Int templateLowerBounds;
@@ -30,7 +31,7 @@ public class Room
         doorWayList = new List<Doorway>();
     }
 
-        /// <summary>
+    /// <summary>
     /// Get the number of enemies to spawn for this room in this dungeon level
     /// </summary>
     public int GetNumberOfEnemiesToSpawn(DungeonLevelSO dungeonLevel)
@@ -46,7 +47,7 @@ public class Room
         return 0;
     }
 
-        /// <summary>
+    /// <summary>
     /// Get the room enemy spawn parameters for this dungeon level - if none found then return null
     /// </summary>
     public RoomEnemySpawnParameters GetRoomEnemySpawnParameters(DungeonLevelSO dungeonLevel)
@@ -60,5 +61,4 @@ public class Room
         }
         return null;
     }
-
 }

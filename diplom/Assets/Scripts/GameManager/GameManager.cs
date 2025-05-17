@@ -55,19 +55,20 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private long gameScore;
     private int scoreMultiplier;
     private InstantiatedRoom bossRoom;
+    private bool isFading = false;
 
     protected override void Awake()
-        {
-            // Call base class
-            base.Awake();
+    {
+        // Call base class
+        base.Awake();
 
-            // Set player details - saved in current player scriptable object from the main menu
-            playerDetails = GameResources.Instance.currentPlayer.playerDetails;
+        // Set player details - saved in current player scriptable object from the main menu
+        playerDetails = GameResources.Instance.currentPlayer.playerDetails;
 
-            // Instantiate player
-            InstantiatePlayer();
+        // Instantiate player
+        InstantiatePlayer();
 
-        }
+    }
 
      /// <summary>
     /// Create player in scene at position
@@ -227,12 +228,75 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 PlayDungeonLevel(currentDungeonLevelListIndex);
 
                 gameState = GameState.playingLevel;
-               
+
                 // Trigger room enemies defeated since we start in the entrance where there are no enemies (just in case you have a level with just a boss room!)
                 RoomEnemiesDefeated();
 
                 break;
-            
+
+            // While playing the level handle the tab key for the dungeon overview map.
+            case GameState.playingLevel:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    DisplayDungeonOverviewMap();
+                }
+
+                break;
+
+            // While engaging enemies handle the escape key for the pause menu
+            case GameState.engagingEnemies:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+
+                break;
+
+
+            // if in the dungeon overview map handle the release of the tab key to clear the map
+            case GameState.dungeonOverviewMap:
+
+                // Key released
+                if (Input.GetKeyUp(KeyCode.Tab))
+                {
+                    // Clear dungeonOverviewMap
+                    DungeonMap.Instance.ClearDungeonOverViewMap();
+                }
+
+                break;
+
+            // While playing the level and before the boss is engaged, handle the tab key for the dungeon overview map.
+            case GameState.bossStage:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    DisplayDungeonOverviewMap();
+                }
+
+                break;
+
+            // While engaging the boss handle the escape key for the pause menu
+            case GameState.engagingBoss:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+
+                break;
+
             // handle the level being completed
             case GameState.levelCompleted:
 
@@ -259,14 +323,23 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 }
 
                 break;
-            
+
             // restart the game
             case GameState.restartGame:
 
                 RestartGame();
 
                 break;
+
+            // if the game is paused and the pause menu showing, then pressing escape again will clear the pause menu
+            case GameState.gamePaused:
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+                break;
         }
+
     }
 
     /// <summary>
@@ -329,6 +402,47 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             StartCoroutine(BossStage());
         }
 
+    }
+
+    
+    /// <summary>
+    /// Pause game menu - also called from resume game button on pause menu
+    /// </summary>
+    public void PauseGameMenu()
+    {
+        if (gameState != GameState.gamePaused)
+        {
+            pauseMenu.SetActive(true);
+            GetPlayer().playerControl.DisablePlayer();
+
+            // Set game state
+            previousGameState = gameState;
+            gameState = GameState.gamePaused;
+        }
+        else if (gameState == GameState.gamePaused)
+        {
+            pauseMenu.SetActive(false);
+            GetPlayer().playerControl.EnablePlayer();
+
+            // Set game state
+            gameState = previousGameState;
+            previousGameState = GameState.gamePaused;
+
+        }
+    }
+
+    
+    /// <summary>
+    /// Dungeon Map Screen Display
+    /// </summary>
+    private void DisplayDungeonOverviewMap()
+    {
+        // Если сейчас черный экран (с названием уровня и т.п.), то карта не открывается.
+        if (isFading)
+            return;
+
+        // Иначе - карта открывается
+        DungeonMap.Instance.DisplayDungeonOverViewMap();
     }
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
@@ -486,6 +600,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     /// </summary>
     public IEnumerator Fade(float startFadeAlpha, float targetFadeAlpha, float fadeSeconds, Color backgroundColor)
     {
+        isFading = true;
+
         Image image = canvasGroup.GetComponent<Image>();
         image.color = backgroundColor;
 
@@ -497,6 +613,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             canvasGroup.alpha = Mathf.Lerp(startFadeAlpha, targetFadeAlpha, time / fadeSeconds);
             yield return null;
         }
+
+        isFading = false;
 
     }
 

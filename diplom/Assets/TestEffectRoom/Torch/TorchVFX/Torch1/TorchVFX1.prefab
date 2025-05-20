@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 1284115498529810700}
   - component: {fileID: 6708501220249581203}
   m_Layer: 0
-  m_Name: TorchVFX
+  m_Name: TorchVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5052395173371509663
+--- !u!114 &-5692755032887433208
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,29 +20,30 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpherePanShader
-  m_Shader: {fileID: -6465566751694194690, guid: 3b8196d0b1c9ff14ba8b71ee889838d0, type: 3}
+  m_Name: Shader Graphs_PanShader 1
+  m_Shader: {fileID: -6465566751694194690, guid: e9f7a2da568856c4e9f016f43beb3931, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
   disabledShaderPasses:
-  - DepthOnly
   - MOTIONVECTORS
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 07e71153179ccda4c9025eedf4d7981f, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
@@ -58,13 +59,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0
+    - _AlphaClip: 1
     - _AlphaToMask: 0
     - _Blend: 2
     - _CastShadows: 1
-    - _Cull: 2
+    - _Cull: 0
     - _DstBlend: 1
-    - _MainTexPower: 1.6
+    - _MainTexPower: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
@@ -72,9 +73,12 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
+    - _clip: 0
     m_Colors:
-    - _Color: {r: 11.984315, g: 11.984315, b: 11.984315, a: 1}
-    - _MainTexSpeed: {r: 0.1, g: 0.5, b: 0, a: 0}
+    - _Color: {r: 1024, g: 1024, b: 1024, a: 1}
+    - _MainTexSpeed: {r: 0, g: -2, b: 0, a: 0}
     - _MainTexTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _back: {r: 0, g: 0, b: 0, a: 1}
+    - _front: {r: 11.773584, g: 2.0958214, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da577cd1d775ded4ca1ecd9ce7d8d66f, type: 3}
   m_Name: CurrentPlayer
   m_EditorClassIdentifier: 
-  playerDetails: {fileID: 11400000, guid: 22d50901a8362794e9af5f918c973eea, type: 2}
+  playerDetails: {fileID: 11400000, guid: 3830a1499b771744db0becf80fd06251, type: 2}
   playerName: ROB

@@ -3,12 +3,12 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class WeaponShootEffect : MonoBehaviour
 {
-    private ParticleSystem shootEffectParticleSystem;
+    private ParticleSystem[] shootEffectParticleSystems;
 
     private void Awake()
     {
-        // Load components
-        shootEffectParticleSystem = GetComponent<ParticleSystem>();
+        // Load all particle systems (including children)
+        shootEffectParticleSystems = GetComponentsInChildren<ParticleSystem>();
     }
 
     /// <summary>
@@ -16,88 +16,78 @@ public class WeaponShootEffect : MonoBehaviour
     /// </summary>
     public void SetShootEffect(WeaponShootEffectSO shootEffect, float aimAngle)
     {
-        // Set shoot effect color gradient
-        SetShootEffectColorGradient(shootEffect.colorGradient);
+        if (shootEffectParticleSystems == null || shootEffectParticleSystems.Length == 0)
+        {
+            Debug.LogWarning("No particle systems found for shoot effect");
+            return;
+        }
 
-        // Set shoot effect particle system starting values
-        SetShootEffectParticleStartingValues(shootEffect.duration, shootEffect.startParticleSize, shootEffect.startParticleSpeed, shootEffect.startLifetime, shootEffect.effectGravity, shootEffect.maxParticleNumber);
+        // Apply settings to each particle system
+        for (int i = 0; i < Mathf.Min(shootEffect.shootEffectPrefabs.Length, shootEffectParticleSystems.Length); i++)
+        {
+            var effectSettings = shootEffect.shootEffectPrefabs[i];
+            var particleSystem = shootEffectParticleSystems[i];
 
-        // Set shoot effect particle system particle burst particle number
-        SetShootEffectParticleEmission(shootEffect.emissionRate, shootEffect.burstParticleNumber);
+            // Set shoot effect parameters
+            SetShootEffectColorGradient(particleSystem, effectSettings.colorGradient);
+            SetShootEffectParticleStartingValues(particleSystem, effectSettings.duration, effectSettings.startParticleSize, 
+                effectSettings.startParticleSpeed, effectSettings.startLifetime, effectSettings.effectGravity, 
+                effectSettings.maxParticleNumber);
+            SetShootEffectParticleEmission(particleSystem, effectSettings.emissionRate, effectSettings.burstParticleNumber);
+            SetShootEffectParticleSprite(particleSystem, effectSettings.sprite);
+            SetShootEffectVelocityOverLifeTime(particleSystem, effectSettings.velocityOverLifetimeMin, effectSettings.velocityOverLifetimeMax);
+        }
 
-        // Set emmitter rotation
+        // Set emmitter rotation for all effects
         SetEmmitterRotation(aimAngle);
-
-        // Set shoot effect particle sprite
-        SetShootEffectParticleSprite(shootEffect.sprite);
-
-        // Set shoot effect lifetime min and max velocities
-        SetShootEffectVelocityOverLifeTime(shootEffect.velocityOverLifetimeMin, shootEffect.velocityOverLifetimeMax);
-
     }
 
     /// <summary>
     /// Set the shoot effect particle system color gradient
     /// </summary>
-    private void SetShootEffectColorGradient(Gradient gradient)
+    private void SetShootEffectColorGradient(ParticleSystem particleSystem, Gradient gradient)
     {
-        // Set colour gradient
-        ParticleSystem.ColorOverLifetimeModule colorOverLifetimeModule = shootEffectParticleSystem.colorOverLifetime;
+        ParticleSystem.ColorOverLifetimeModule colorOverLifetimeModule = particleSystem.colorOverLifetime;
         colorOverLifetimeModule.color = gradient;
     }
 
     /// <summary>
     /// Set shoot effect particle system starting values
     /// </summary>
-    private void SetShootEffectParticleStartingValues(float duration, float startParticleSize, float startParticleSpeed, float startLifetime, float effectGravity, int maxParticles)
+    private void SetShootEffectParticleStartingValues(ParticleSystem particleSystem, float duration, float startParticleSize, 
+        float startParticleSpeed, float startLifetime, float effectGravity, int maxParticles)
     {
-        ParticleSystem.MainModule mainModule = shootEffectParticleSystem.main;
+        ParticleSystem.MainModule mainModule = particleSystem.main;
 
-        // Set particle system duration
         mainModule.duration = duration;
-
-        // Set particle start size
         mainModule.startSize = startParticleSize;
-
-        // Set particle start speed
         mainModule.startSpeed = startParticleSpeed;
-
-        // Set particle start lifetime
         mainModule.startLifetime = startLifetime;
-
-        // Set particle starting gravity
         mainModule.gravityModifier = effectGravity;
-
-        // Set max particles
         mainModule.maxParticles = maxParticles;
-
     }
 
     /// <summary>
     /// Set shoot effect particle system particle burst particle number
     /// </summary>
-    private void SetShootEffectParticleEmission(int emissionRate, float burstParticleNumber)
+    private void SetShootEffectParticleEmission(ParticleSystem particleSystem, int emissionRate, float burstParticleNumber)
     {
-        ParticleSystem.EmissionModule emissionModule = shootEffectParticleSystem.emission;
+        ParticleSystem.EmissionModule emissionModule = particleSystem.emission;
 
-        // Set particle burst number
         ParticleSystem.Burst burst = new ParticleSystem.Burst(0f, burstParticleNumber);
         emissionModule.SetBurst(0, burst);
-
-        // Set particle emission rate
         emissionModule.rateOverTime = emissionRate;
     }
 
     /// <summary>
     /// Set shoot effect particle system sprite
     /// </summary>
-    private void SetShootEffectParticleSprite(Sprite sprite)
+    private void SetShootEffectParticleSprite(ParticleSystem particleSystem, Sprite sprite)
     {
-        // Set particle burst number
-        ParticleSystem.TextureSheetAnimationModule textureSheetAnimationModule = shootEffectParticleSystem.textureSheetAnimation;
+        if (sprite == null) return;
 
+        ParticleSystem.TextureSheetAnimationModule textureSheetAnimationModule = particleSystem.textureSheetAnimation;
         textureSheetAnimationModule.SetSprite(0, sprite);
-
     }
 
     /// <summary>
@@ -111,9 +101,9 @@ public class WeaponShootEffect : MonoBehaviour
     /// <summary>
     /// Set the shoot effect velocity over lifetime
     /// </summary>
-    private void SetShootEffectVelocityOverLifeTime(Vector3 minVelocity, Vector3 maxVelocity)
+    private void SetShootEffectVelocityOverLifeTime(ParticleSystem particleSystem, Vector3 minVelocity, Vector3 maxVelocity)
     {
-        ParticleSystem.VelocityOverLifetimeModule velocityOverLifetimeModule = shootEffectParticleSystem.velocityOverLifetime;
+        ParticleSystem.VelocityOverLifetimeModule velocityOverLifetimeModule = particleSystem.velocityOverLifetime;
 
         // Define min max X velocity
         ParticleSystem.MinMaxCurve minMaxCurveX = new ParticleSystem.MinMaxCurve();
@@ -135,7 +125,5 @@ public class WeaponShootEffect : MonoBehaviour
         minMaxCurveZ.constantMin = minVelocity.z;
         minMaxCurveZ.constantMax = maxVelocity.z;
         velocityOverLifetimeModule.z = minMaxCurveZ;
-
     }
-
 }

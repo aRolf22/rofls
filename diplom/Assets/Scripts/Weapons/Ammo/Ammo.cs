@@ -231,19 +231,26 @@ public class Ammo : MonoBehaviour, IFireable
     /// Display the ammo hit effect
     /// </summary>
     private void AmmoHitEffect()
-    {
+    {   
         // Process if a hit effect has been specified
-        if (ammoDetails.ammoHitEffect != null && ammoDetails.ammoHitEffect.ammoHitEffectPrefab != null)
+        if (ammoDetails.ammoHitEffect != null &&
+            ammoDetails.ammoHitEffect.hitEffectPrefabs != null &&
+            ammoDetails.ammoHitEffect.hitEffectPrefabs.Length > 0)
         {
-            // Get ammo hit effect gameobject from the pool (with particle system component)
-            AmmoHitEffect ammoHitEffect = (AmmoHitEffect)PoolManager.Instance.ReuseComponent(ammoDetails.ammoHitEffect.ammoHitEffectPrefab, transform.position, Quaternion.identity);
+            foreach (var effectPrefab in ammoDetails.ammoHitEffect.hitEffectPrefabs)
+            {
+                if (effectPrefab.prefab == null) continue;
 
-            // Set Hit Effect
-            ammoHitEffect.SetHitEffect(ammoDetails.ammoHitEffect);
+                AmmoHitEffect ammoHitEffect = (AmmoHitEffect)PoolManager.Instance.ReuseComponent(
+                    effectPrefab.prefab,
+                    transform.position,
+                    Quaternion.identity);
 
             // Set gameobject active (the particle system is set to automatically disable the
             // gameobject once finished)
-            ammoHitEffect.gameObject.SetActive(true);
+                ammoHitEffect.SetHitEffect(effectPrefab);
+                ammoHitEffect.gameObject.SetActive(true);
+            }
         }
     }
 

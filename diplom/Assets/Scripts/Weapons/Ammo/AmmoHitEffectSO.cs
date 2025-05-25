@@ -3,94 +3,75 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AmmoHitEffect_", menuName = "Scriptable Objects/Weapons/Ammo Hit Effect")]
 public class AmmoHitEffectSO : ScriptableObject
 {
-    #region Header AMMO HIT EFFECT DETAILS
-    [Space(10)]
-    [Header("AMMO HIT EFFECT DETAILS")]
-    #endregion Header AMMO HIT EFFECT DETAILS
-
-    #region Tooltip
-    [Tooltip("The color gradient for the hit effect.  This gradient show the color of particles during their lifetime - from left to right ")]
-    #endregion Tooltip
-    public Gradient colorGradient;
-
-    #region Tooltip
-    [Tooltip("The length of time the particle system is emitting particles")]
-    #endregion Tooltip
-    public float duration = 0.50f;
-
-    #region Tooltip
-    [Tooltip("The start particle size for the particle effect")]
-    #endregion Tooltip
-    public float startParticleSize = 0.25f;
-
-    #region Tooltip
-    [Tooltip("The start particle speed for the particle effect")]
-    #endregion Tooltip
-    public float startParticleSpeed = 3f;
-
-    #region Tooltip
-    [Tooltip("The particle lifetime for the particle effect")]
-    #endregion Tooltip
-    public float startLifetime = 0.5f;
-
-    #region Tooltip
-    [Tooltip("The maximum number of particles to be emitted")]
-    #endregion Tooltip
-    public int maxParticleNumber = 100;
-
-    #region Tooltip
-    [Tooltip("The number of particles emitted per second. If zero it will just be the burst number")]
-    #endregion Tooltip
-    public int emissionRate = 100;
-
-    #region Tooltip
-    [Tooltip("How many particles should be emmitted in the particle effect burst")]
-    #endregion Tooltip
-    public int burstParticleNumber = 20;
-
-    #region Tooltip
-    [Tooltip("The gravity on the particles - a small negative number will make them float up")]
-    #endregion
-    public float effectGravity = -0.01f;
-
-    #region Tooltip
-    [Tooltip("The sprite for the particle effect.  If none is specified then the default particle sprite will be used")]
-    #endregion Tooltip
-    public Sprite sprite;
-
-    #region Tooltip
-    [Tooltip("The min velocity for the particle over its lifetime. A random value between min and max will be generated.")]
-    #endregion Tooltip
-    public Vector3 velocityOverLifetimeMin;
-
-    #region Tooltip
-    [Tooltip("The max velocity for the particle over its lifetime. A random value between min and max will be generated.")]
-    #endregion Tooltip
-    public Vector3 velocityOverLifetimeMax;
-
-    #region Tooltip
-    [Tooltip("The prefab containing the hit effect particle system - requires a corresponding ammoHitEffectSO to be defined")]
-    #endregion
-    public GameObject ammoHitEffectPrefab;
-
-
-    #region Validation
-
-#if UNITY_EDITOR
-
-    private void OnValidate()
+    [System.Serializable]
+    public class HitEffectPrefab
     {
-        HelperUtilities.ValidateCheckPositiveValue(this, nameof(duration), duration, false);
-        HelperUtilities.ValidateCheckPositiveValue(this, nameof(startParticleSize), startParticleSize, false);
-        HelperUtilities.ValidateCheckPositiveValue(this, nameof(startParticleSpeed), startParticleSpeed, false);
-        HelperUtilities.ValidateCheckPositiveValue(this, nameof(startLifetime), startLifetime, false);
-        HelperUtilities.ValidateCheckPositiveValue(this, nameof(maxParticleNumber), maxParticleNumber, false);
-        HelperUtilities.ValidateCheckPositiveValue(this, nameof(emissionRate), emissionRate, true);
-        HelperUtilities.ValidateCheckPositiveValue(this, nameof(burstParticleNumber), burstParticleNumber, true);
-        HelperUtilities.ValidateCheckNullValue(this, nameof(ammoHitEffectPrefab), ammoHitEffectPrefab);
+        [Tooltip("The prefab containing the particle system for this hit effect")]
+        public GameObject prefab;
+        
+        [Tooltip("The color gradient for the hit effect")]
+        public Gradient colorGradient;
+        
+        [Tooltip("The length of time the particle system is emitting particles")]
+        public float duration;
+        
+        [Tooltip("The start particle size")]
+        public float startParticleSize;
+        
+        [Tooltip("The start particle speed")]
+        public float startParticleSpeed;
+        
+        [Tooltip("The particle lifetime")]
+        public float startLifetime;
+        
+        [Tooltip("The maximum number of particles")]
+        public int maxParticleNumber;
+        
+        [Tooltip("The number of particles emitted per second")]
+        public int emissionRate;
+        
+        [Tooltip("How many particles should be emitted in the burst")]
+        public int burstParticleNumber;
+        
+        [Tooltip("The gravity on the particles")]
+        public float effectGravity;
+        
+        [Tooltip("The sprite for the particle effect")]
+        public Sprite sprite;
+        
+        [Tooltip("The min velocity for particles over lifetime")]
+        public Vector3 velocityOverLifetimeMin;
+        
+        [Tooltip("The max velocity for particles over lifetime")]
+        public Vector3 velocityOverLifetimeMax;
     }
 
-#endif
+    [Header("HIT EFFECT DETAILS")]
+    public HitEffectPrefab[] hitEffectPrefabs;
 
-    #endregion Validation
+    #region Validation
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (hitEffectPrefabs == null || hitEffectPrefabs.Length == 0)
+        {
+            Debug.LogWarning($"No hit effect prefabs assigned in {name}");
+            return;
+        }
+
+        for (int i = 0; i < hitEffectPrefabs.Length; i++)
+        {
+            var effect = hitEffectPrefabs[i];
+            HelperUtilities.ValidateCheckNullValue(this, $"{nameof(hitEffectPrefabs)}[{i}].prefab", effect.prefab);
+            HelperUtilities.ValidateCheckPositiveValue(this, $"{nameof(hitEffectPrefabs)}[{i}].duration", effect.duration, false);
+            HelperUtilities.ValidateCheckPositiveValue(this, $"{nameof(hitEffectPrefabs)}[{i}].startParticleSize", effect.startParticleSize, false);
+            HelperUtilities.ValidateCheckPositiveValue(this, $"{nameof(hitEffectPrefabs)}[{i}].startParticleSpeed", effect.startParticleSpeed, false);
+            HelperUtilities.ValidateCheckPositiveValue(this, $"{nameof(hitEffectPrefabs)}[{i}].startLifetime", effect.startLifetime, false);
+            HelperUtilities.ValidateCheckPositiveValue(this, $"{nameof(hitEffectPrefabs)}[{i}].maxParticleNumber", effect.maxParticleNumber, false);
+            HelperUtilities.ValidateCheckPositiveValue(this, $"{nameof(hitEffectPrefabs)}[{i}].emissionRate", effect.emissionRate, true);
+            HelperUtilities.ValidateCheckPositiveValue(this, $"{nameof(hitEffectPrefabs)}[{i}].burstParticleNumber", effect.burstParticleNumber, true);
+        }
+    }
+#endif
+    #endregion
 }

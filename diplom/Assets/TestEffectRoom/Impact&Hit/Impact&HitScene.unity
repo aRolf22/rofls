@@ -10851,6 +10851,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hit4
       objectReference: {fileID: 0}
+    - target: {fileID: 4893251923539788429, guid: 92ebdb30792f621488ea5d6082bcb9b1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893251923539788429, guid: 92ebdb30792f621488ea5d6082bcb9b1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893251923539788429, guid: 92ebdb30792f621488ea5d6082bcb9b1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273058515192241822, guid: 92ebdb30792f621488ea5d6082bcb9b1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273058515192241822, guid: 92ebdb30792f621488ea5d6082bcb9b1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273058515192241822, guid: 92ebdb30792f621488ea5d6082bcb9b1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

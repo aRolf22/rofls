@@ -3,49 +3,44 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class WeaponShootEffect : MonoBehaviour
 {
-    private ParticleSystem[] shootEffectParticleSystems;
+    private new ParticleSystem particleSystem;
 
     private void Awake()
     {
-        // Load all particle systems (including children)
-        shootEffectParticleSystems = GetComponentsInChildren<ParticleSystem>();
+        // Get the ParticleSystem component
+        particleSystem = GetComponent<ParticleSystem>();
     }
 
     /// <summary>
-    /// Set the Shoot Effect from the passed in WeaponShootEffectSO and aimAngle
+    /// Set the Shoot Effect with specific settings
     /// </summary>
-    public void SetShootEffect(WeaponShootEffectSO shootEffect, float aimAngle)
+    public void SetShootEffect(WeaponShootEffectSO.ShootEffectPrefab effectSettings, float aimAngle)
     {
-        if (shootEffectParticleSystems == null || shootEffectParticleSystems.Length == 0)
+        if (particleSystem == null)
         {
-            Debug.LogWarning("No particle systems found for shoot effect");
+            Debug.LogWarning("No ParticleSystem component found");
             return;
         }
 
-        // Apply settings to each particle system
-        for (int i = 0; i < Mathf.Min(shootEffect.shootEffectPrefabs.Length, shootEffectParticleSystems.Length); i++)
-        {
-            var effectSettings = shootEffect.shootEffectPrefabs[i];
-            var particleSystem = shootEffectParticleSystems[i];
-
-            // Set shoot effect parameters
-            SetShootEffectColorGradient(particleSystem, effectSettings.colorGradient);
-            SetShootEffectParticleStartingValues(particleSystem, effectSettings.duration, effectSettings.startParticleSize, 
-                effectSettings.startParticleSpeed, effectSettings.startLifetime, effectSettings.effectGravity, 
-                effectSettings.maxParticleNumber);
-            SetShootEffectParticleEmission(particleSystem, effectSettings.emissionRate, effectSettings.burstParticleNumber);
-            SetShootEffectParticleSprite(particleSystem, effectSettings.sprite);
-            SetShootEffectVelocityOverLifeTime(particleSystem, effectSettings.velocityOverLifetimeMin, effectSettings.velocityOverLifetimeMax);
-        }
-
-        // Set emmitter rotation for all effects
+        // Set all effect parameters
+        SetShootEffectColorGradient(effectSettings.colorGradient);
+        SetShootEffectParticleStartingValues(
+            effectSettings.duration,
+            effectSettings.startParticleSize,
+            effectSettings.startParticleSpeed,
+            effectSettings.startLifetime,
+            effectSettings.effectGravity,
+            effectSettings.maxParticleNumber);
+        SetShootEffectParticleEmission(effectSettings.emissionRate, effectSettings.burstParticleNumber);
+        SetShootEffectParticleSprite(effectSettings.sprite);
+        SetShootEffectVelocityOverLifeTime(effectSettings.velocityOverLifetimeMin, effectSettings.velocityOverLifetimeMax);
         SetEmmitterRotation(aimAngle);
     }
 
     /// <summary>
     /// Set the shoot effect particle system color gradient
     /// </summary>
-    private void SetShootEffectColorGradient(ParticleSystem particleSystem, Gradient gradient)
+    private void SetShootEffectColorGradient(Gradient gradient)
     {
         ParticleSystem.ColorOverLifetimeModule colorOverLifetimeModule = particleSystem.colorOverLifetime;
         colorOverLifetimeModule.color = gradient;
@@ -54,7 +49,7 @@ public class WeaponShootEffect : MonoBehaviour
     /// <summary>
     /// Set shoot effect particle system starting values
     /// </summary>
-    private void SetShootEffectParticleStartingValues(ParticleSystem particleSystem, float duration, float startParticleSize, 
+    private void SetShootEffectParticleStartingValues(float duration, float startParticleSize,
         float startParticleSpeed, float startLifetime, float effectGravity, int maxParticles)
     {
         ParticleSystem.MainModule mainModule = particleSystem.main;
@@ -70,7 +65,7 @@ public class WeaponShootEffect : MonoBehaviour
     /// <summary>
     /// Set shoot effect particle system particle burst particle number
     /// </summary>
-    private void SetShootEffectParticleEmission(ParticleSystem particleSystem, int emissionRate, float burstParticleNumber)
+    private void SetShootEffectParticleEmission(int emissionRate, float burstParticleNumber)
     {
         ParticleSystem.EmissionModule emissionModule = particleSystem.emission;
 
@@ -82,7 +77,7 @@ public class WeaponShootEffect : MonoBehaviour
     /// <summary>
     /// Set shoot effect particle system sprite
     /// </summary>
-    private void SetShootEffectParticleSprite(ParticleSystem particleSystem, Sprite sprite)
+    private void SetShootEffectParticleSprite(Sprite sprite)
     {
         if (sprite == null) return;
 
@@ -101,7 +96,7 @@ public class WeaponShootEffect : MonoBehaviour
     /// <summary>
     /// Set the shoot effect velocity over lifetime
     /// </summary>
-    private void SetShootEffectVelocityOverLifeTime(ParticleSystem particleSystem, Vector3 minVelocity, Vector3 maxVelocity)
+    private void SetShootEffectVelocityOverLifeTime(Vector3 minVelocity, Vector3 maxVelocity)
     {
         ParticleSystem.VelocityOverLifetimeModule velocityOverLifetimeModule = particleSystem.velocityOverLifetime;
 

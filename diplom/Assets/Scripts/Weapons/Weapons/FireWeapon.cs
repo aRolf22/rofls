@@ -219,32 +219,35 @@ public class FireWeapon : MonoBehaviour
 /// </summary>
 private void WeaponShootEffect(float aimAngle)
 {
-    // Process if there is a shoot effect and at least one prefab
-    if (activeWeapon.GetCurrentWeapon().weaponDetails.weaponShootEffect != null && 
-        activeWeapon.GetCurrentWeapon().weaponDetails.weaponShootEffect.shootEffectPrefabs != null &&
-        activeWeapon.GetCurrentWeapon().weaponDetails.weaponShootEffect.shootEffectPrefabs.Length > 0)
+    // Check if shoot effect is configured
+    var shootEffectSO = activeWeapon.GetCurrentWeapon().weaponDetails.weaponShootEffect;
+    if (shootEffectSO == null || shootEffectSO.shootEffectPrefabs == null || shootEffectSO.shootEffectPrefabs.Length == 0)
+        return;
+
+    // Get shoot position once
+    Vector3 shootPosition = activeWeapon.GetShootEffectPosition();
+
+    // Process each effect prefab with its own settings
+    for (int i = 0; i < shootEffectSO.shootEffectPrefabs.Length; i++)
     {
-        // Get all shoot effect prefabs
-        var shootEffects = activeWeapon.GetCurrentWeapon().weaponDetails.weaponShootEffect.shootEffectPrefabs;
+        var effectSettings = shootEffectSO.shootEffectPrefabs[i];
+        if (effectSettings.prefab == null) continue;
 
-        // Spawn each effect prefab
-        foreach (var effectPrefab in shootEffects)
-        {
-            if (effectPrefab.prefab != null)
-            {
-                // Get weapon shoot effect gameobject from the pool with particle system component
-                WeaponShootEffect weaponShootEffect = (WeaponShootEffect)PoolManager.Instance.ReuseComponent(
-                    effectPrefab.prefab, 
-                    activeWeapon.GetShootEffectPosition(), 
-                    Quaternion.identity);
+        // Get effect from pool
+        GameObject effectInstance = PoolManager.Instance.ReuseComponent(
+            effectSettings.prefab,
+            shootPosition,
+            Quaternion.identity).gameObject;
 
-                // Set shoot effect
-                weaponShootEffect.SetShootEffect(activeWeapon.GetCurrentWeapon().weaponDetails.weaponShootEffect, aimAngle);
+        // Get WeaponShootEffect component
+        WeaponShootEffect weaponShootEffect = effectInstance.GetComponent<WeaponShootEffect>();
+        if (weaponShootEffect == null) continue;
 
-                // Set gameobject active
-                weaponShootEffect.gameObject.SetActive(true);
-            }
-        }
+        // Set effect parameters - pass the specific effect settings
+        weaponShootEffect.SetShootEffect(effectSettings, aimAngle);
+
+        // Activate effect
+        effectInstance.SetActive(true);
     }
 }
 

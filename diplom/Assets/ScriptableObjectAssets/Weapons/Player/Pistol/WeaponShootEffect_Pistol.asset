@@ -45,7 +45,7 @@ MonoBehaviour:
       m_NumColorKeys: 6
       m_NumAlphaKeys: 3
     duration: 0.5
-    startParticleSize: 0.2
+    startParticleSize: 200
     startParticleSpeed: 0.4
     startLifetime: 1.1
     maxParticleNumber: 100
@@ -55,7 +55,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: ecf6e010769abce4cb1e7c60e0f3b3d8, type: 3}
     velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
     velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
-  - prefab: {fileID: 7853615770937549561, guid: db916bb7c7059c642adbd390f7ebd2a0, type: 3}
+  - prefab: {fileID: 7255582679228879866, guid: df3ab6642a81825408afd488e2e759b4, type: 3}
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.9528302, g: 0, b: 0, a: 1}

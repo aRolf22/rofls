@@ -18,17 +18,35 @@ public class AmmoHitEffect : MonoBehaviour
             return;
         }
 
-        SetHitEffectColorGradient(effectSettings.colorGradient);
-        SetHitEffectParticleStartingValues(
-            effectSettings.duration,
-            effectSettings.startParticleSize,
-            effectSettings.startParticleSpeed,
-            effectSettings.startLifetime,
-            effectSettings.effectGravity,
-            effectSettings.maxParticleNumber);
-        SetHitEffectParticleEmission(effectSettings.emissionRate, effectSettings.burstParticleNumber);
-        SetHitEffectParticleSprite(effectSettings.sprite);
-        SetHitEffectVelocityOverLifeTime(effectSettings.velocityOverLifetimeMin, effectSettings.velocityOverLifetimeMax);
+        if (effectSettings.applyColorGradient)
+            SetHitEffectColorGradient(effectSettings.colorGradient);
+
+        if (effectSettings.applyDuration || effectSettings.applyStartParticleSize || effectSettings.applyStartParticleSpeed || 
+            effectSettings.applyStartLifetime || effectSettings.applyEffectGravity || effectSettings.applyMaxParticleNumber)
+        {
+            SetHitEffectParticleStartingValues(
+                effectSettings.applyDuration ? effectSettings.duration : particleSystem.main.duration,
+                effectSettings.applyStartParticleSize ? effectSettings.startParticleSize : particleSystem.main.startSize.constant,
+                effectSettings.applyStartParticleSpeed ? effectSettings.startParticleSpeed : particleSystem.main.startSpeed.constant,
+                effectSettings.applyStartLifetime ? effectSettings.startLifetime : particleSystem.main.startLifetime.constant,
+                effectSettings.applyEffectGravity ? effectSettings.effectGravity : particleSystem.main.gravityModifier.constant,
+                effectSettings.applyMaxParticleNumber ? effectSettings.maxParticleNumber : particleSystem.main.maxParticles
+            );
+        }
+
+        if (effectSettings.applyEmissionRate || effectSettings.applyBurstParticleNumber)
+        {
+            SetHitEffectParticleEmission(
+                effectSettings.applyEmissionRate ? effectSettings.emissionRate : particleSystem.emission.rateOverTime.constant,
+                effectSettings.applyBurstParticleNumber ? effectSettings.burstParticleNumber : particleSystem.emission.GetBurst(0).count.constant
+            );
+        }
+
+        if (effectSettings.applySprite)
+            SetHitEffectParticleSprite(effectSettings.sprite);
+
+        if (effectSettings.applyVelocityOverLifetime)
+            SetHitEffectVelocityOverLifeTime(effectSettings.velocityOverLifetimeMin, effectSettings.velocityOverLifetimeMax);
     }
 
     private void SetHitEffectColorGradient(Gradient gradient)
@@ -49,7 +67,7 @@ public class AmmoHitEffect : MonoBehaviour
         mainModule.maxParticles = maxParticles;
     }
 
-    private void SetHitEffectParticleEmission(int emissionRate, float burstParticleNumber)
+    private void SetHitEffectParticleEmission(float emissionRate, float burstParticleNumber)
     {
         ParticleSystem.EmissionModule emissionModule = particleSystem.emission;
         ParticleSystem.Burst burst = new ParticleSystem.Burst(0f, burstParticleNumber);

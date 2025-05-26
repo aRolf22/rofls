@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootEffectPrefabs:
   - prefab: {fileID: 7255582679228879866, guid: df3ab6642a81825408afd488e2e759b4, type: 3}
+    followShootPosition: 0
     applyColorGradient: 1
     colorGradient:
       serializedVersion: 2

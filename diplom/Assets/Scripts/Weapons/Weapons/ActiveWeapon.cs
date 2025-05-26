@@ -95,6 +95,11 @@ public class ActiveWeapon : MonoBehaviour
         currentWeapon = null;
     }
 
+    public Transform GetWeaponEffectPositionTransform()
+    {
+        return weaponEffectPositionTransform;
+    }
+
     #region Validation
 #if UNITY_EDITOR
     private void OnValidate()

@@ -9,6 +9,10 @@ public class WeaponShootEffectSO : ScriptableObject
         [Tooltip("The prefab containing the particle system for this shoot effect")]
         public GameObject prefab;
 
+        [Header("Follow Position")]
+        [Tooltip("If true, the effect will follow the shoot position after spawning")]
+        public bool followShootPosition = false;
+
         [Header("Color Settings")]
         public bool applyColorGradient = true;
         [Tooltip("The color gradient for this shoot effect. This gradient shows the color of particles during their lifetime - from left to right")]

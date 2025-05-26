@@ -4,13 +4,34 @@ using UnityEngine;
 public class WeaponShootEffect : MonoBehaviour
 {
     private new ParticleSystem particleSystem;
+    private Transform followTarget;
+    private bool shouldFollow;
+     private bool requiresFollowUpdate; // Оптимизация: проверяем только если нужно
 
     private void Awake()
     {
         particleSystem = GetComponent<ParticleSystem>();
+        // Отключаем скрипт, если не требуется обновление (экономит CPU)
+        enabled = false;
+
     }
 
-    public void SetShootEffect(WeaponShootEffectSO.ShootEffectPrefab effectSettings, float aimAngle)
+    
+    private void Update()
+    {
+        if (followTarget != null)
+        {
+            transform.position = followTarget.position;
+        }
+        else if (requiresFollowUpdate)
+        {
+            // Если цель исчезла, но флаг остался - отключаем
+            requiresFollowUpdate = false;
+            enabled = false;
+        }
+    }
+
+    public void SetShootEffect(WeaponShootEffectSO.ShootEffectPrefab effectSettings, float aimAngle, Transform target = null)
     {
         if (particleSystem == null)
         {
@@ -18,10 +39,18 @@ public class WeaponShootEffect : MonoBehaviour
             return;
         }
 
+        // Настройка следования
+        requiresFollowUpdate = effectSettings.followShootPosition;
+        followTarget = target;
+        
+        // Включаем скрипт только если требуется следование
+        enabled = requiresFollowUpdate;
+
+
         if (effectSettings.applyColorGradient)
             SetShootEffectColorGradient(effectSettings.colorGradient);
-        
-         if (effectSettings.applyStartColor)
+
+        if (effectSettings.applyStartColor)
             SetShootEffectStartColor(effectSettings.startColor);
 
         if (effectSettings.applyDuration || effectSettings.applyStartParticleSize || effectSettings.applyStartParticleSpeed ||

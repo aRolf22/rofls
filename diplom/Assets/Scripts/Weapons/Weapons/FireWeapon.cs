@@ -213,39 +213,37 @@ public class FireWeapon : MonoBehaviour
         firePreChargeTimer = activeWeapon.GetCurrentWeapon().weaponDetails.weaponPrechargeTime;
     }
 
-
-/// <summary>
-/// Display the weapon shoot effect
-/// </summary>
 private void WeaponShootEffect(float aimAngle)
-{
+{   
     // Check if shoot effect is configured
     var shootEffectSO = activeWeapon.GetCurrentWeapon().weaponDetails.weaponShootEffect;
     if (shootEffectSO == null || shootEffectSO.shootEffectPrefabs == null || shootEffectSO.shootEffectPrefabs.Length == 0)
         return;
 
-    // Get shoot position once
-    Vector3 shootPosition = activeWeapon.GetShootEffectPosition();
+        // Get shoot position once
+        Vector3 shootPosition = activeWeapon.GetShootEffectPosition();
 
-    // Process each effect prefab with its own settings
     for (int i = 0; i < shootEffectSO.shootEffectPrefabs.Length; i++)
     {
         var effectSettings = shootEffectSO.shootEffectPrefabs[i];
         if (effectSettings.prefab == null) continue;
 
-        // Get effect from pool
+        // Process each effect prefab with its own settings
         GameObject effectInstance = PoolManager.Instance.ReuseComponent(
             effectSettings.prefab,
             shootPosition,
             Quaternion.identity).gameObject;
 
-        // Get WeaponShootEffect component
+            // Get WeaponShootEffect component
         WeaponShootEffect weaponShootEffect = effectInstance.GetComponent<WeaponShootEffect>();
         if (weaponShootEffect == null) continue;
 
+        // Передаем трансформ для следования, если нужно
+        Transform followTarget = effectSettings.followShootPosition ? activeWeapon.GetWeaponEffectPositionTransform() : null;
+        
         // Set effect parameters - pass the specific effect settings
-        weaponShootEffect.SetShootEffect(effectSettings, aimAngle);
-
+        weaponShootEffect.SetShootEffect(effectSettings, aimAngle, followTarget);
+        
         // Activate effect
         effectInstance.SetActive(true);
     }

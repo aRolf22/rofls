@@ -6115,6 +6115,12 @@ MonoBehaviour:
   - poolSize: 20
     prefab: {fileID: 3962943492151851721, guid: 245d61a4defa6b949ad16eca62a8f630, type: 3}
     componentType: AmmoHitEffect
+  - poolSize: 20
+    prefab: {fileID: 2316359654102704870, guid: 9da77ffaa7b0e1747a41113a862176cf, type: 3}
+    componentType: AmmoHitEffect
+  - poolSize: 20
+    prefab: {fileID: 837718596117833965, guid: 062a821cfe557114a858de056a96d59e, type: 3}
+    componentType: AmmoHitEffect
 --- !u!4 &1978428537
 Transform:
   m_ObjectHideFlags: 0

@@ -13,58 +13,333 @@ MonoBehaviour:
   m_Name: AmmoHitEffect_PlasmaBlaster
   m_EditorClassIdentifier: 
   hitEffectPrefabs:
-  - prefab: {fileID: 7853615770937549561, guid: 1e006a8ea6a0acb44ab5e88d73246615, type: 3}
-    applyColorGradient: 1
+  - prefab: {fileID: 3489430569990590660, guid: 58902e87f9784254f95c9e2a93bf7c03, type: 3}
+    applyColorGradient: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 0.654902}
-      key1: {r: 0, g: 0.19717503, b: 1, a: 1}
-      key2: {r: 0, g: 0.5738604, b: 1, a: 1}
-      key3: {r: 0, g: 0.92546463, b: 1, a: 1}
-      key4: {r: 0, g: 0.10800958, b: 1, a: 0}
-      key5: {r: 1, g: 1, b: 1, a: 0}
+      key0: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 10794
-      ctime2: 22937
-      ctime3: 31033
-      ctime4: 49730
-      ctime5: 65535
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 11951
-      atime2: 52814
-      atime3: 65535
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    applyStartColor: 0
+    startColor: {r: 0, g: 0, b: 0, a: 0}
+    applyDuration: 0
+    duration: 0
+    applyStartParticleSize: 0
+    startParticleSize: 0
+    applyStartParticleSpeed: 0
+    startParticleSpeed: 0
+    applyStartLifetime: 0
+    startLifetime: 0
+    applyMaxParticleNumber: 0
+    maxParticleNumber: 0
+    applyEmissionRate: 0
+    emissionRate: 0
+    applyBurstParticleNumber: 0
+    burstParticleNumber: 0
+    applyEffectGravity: 0
+    effectGravity: 0
+    applySprite: 0
+    sprite: {fileID: 0}
+    applyVelocityOverLifetime: 0
+    velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
+    velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 2108760846571795129, guid: acdd0434d86cfa94786e1ddc8b98da32, type: 3}
+    applyColorGradient: 0
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    applyStartColor: 0
+    startColor: {r: 0, g: 0, b: 0, a: 0}
+    applyDuration: 0
+    duration: 0
+    applyStartParticleSize: 0
+    startParticleSize: 0
+    applyStartParticleSpeed: 0
+    startParticleSpeed: 0
+    applyStartLifetime: 0
+    startLifetime: 0
+    applyMaxParticleNumber: 0
+    maxParticleNumber: 0
+    applyEmissionRate: 0
+    emissionRate: 0
+    applyBurstParticleNumber: 0
+    burstParticleNumber: 0
+    applyEffectGravity: 0
+    effectGravity: 0
+    applySprite: 0
+    sprite: {fileID: 0}
+    applyVelocityOverLifetime: 0
+    velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
+    velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 6347863202559641667, guid: 024b56c2eaddcb24e98ba83ad837d59e, type: 3}
+    applyColorGradient: 0
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    applyStartColor: 0
+    startColor: {r: 0, g: 0, b: 0, a: 0}
+    applyDuration: 0
+    duration: 0
+    applyStartParticleSize: 0
+    startParticleSize: 0
+    applyStartParticleSpeed: 0
+    startParticleSpeed: 0
+    applyStartLifetime: 0
+    startLifetime: 0
+    applyMaxParticleNumber: 0
+    maxParticleNumber: 0
+    applyEmissionRate: 0
+    emissionRate: 0
+    applyBurstParticleNumber: 0
+    burstParticleNumber: 0
+    applyEffectGravity: 0
+    effectGravity: 0
+    applySprite: 0
+    sprite: {fileID: 0}
+    applyVelocityOverLifetime: 0
+    velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
+    velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 946661032324008522, guid: 4ada386d6d7c5a04887bf8608af73d17, type: 3}
+    applyColorGradient: 0
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
       atime4: 0
       atime5: 0
       atime6: 0
       atime7: 0
       m_Mode: 0
       m_ColorSpace: -1
-      m_NumColorKeys: 6
-      m_NumAlphaKeys: 4
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
     applyStartColor: 0
     startColor: {r: 0, g: 0, b: 0, a: 0}
-    applyDuration: 1
-    duration: 0.5
-    applyStartParticleSize: 1
-    startParticleSize: 0.7
-    applyStartParticleSpeed: 1
-    startParticleSpeed: 25
-    applyStartLifetime: 1
-    startLifetime: 0.2
-    applyMaxParticleNumber: 1
-    maxParticleNumber: 20
-    applyEmissionRate: 1
+    applyDuration: 0
+    duration: 0
+    applyStartParticleSize: 0
+    startParticleSize: 0
+    applyStartParticleSpeed: 0
+    startParticleSpeed: 0
+    applyStartLifetime: 0
+    startLifetime: 0
+    applyMaxParticleNumber: 0
+    maxParticleNumber: 0
+    applyEmissionRate: 0
     emissionRate: 0
-    applyBurstParticleNumber: 1
-    burstParticleNumber: 20
-    applyEffectGravity: 1
-    effectGravity: -0.01
-    applySprite: 1
+    applyBurstParticleNumber: 0
+    burstParticleNumber: 0
+    applyEffectGravity: 0
+    effectGravity: 0
+    applySprite: 0
     sprite: {fileID: 0}
-    applyVelocityOverLifetime: 1
+    applyVelocityOverLifetime: 0
+    velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
+    velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 405187370934245478, guid: ffdb01b003e2f0a47bfb1a1bf3e36e6d, type: 3}
+    applyColorGradient: 0
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: -1
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    applyStartColor: 0
+    startColor: {r: 0, g: 0, b: 0, a: 0}
+    applyDuration: 0
+    duration: 0
+    applyStartParticleSize: 0
+    startParticleSize: 0
+    applyStartParticleSpeed: 0
+    startParticleSpeed: 0
+    applyStartLifetime: 0
+    startLifetime: 0
+    applyMaxParticleNumber: 0
+    maxParticleNumber: 0
+    applyEmissionRate: 0
+    emissionRate: 0
+    applyBurstParticleNumber: 0
+    burstParticleNumber: 0
+    applyEffectGravity: 0
+    effectGravity: 0
+    applySprite: 0
+    sprite: {fileID: 0}
+    applyVelocityOverLifetime: 0
+    velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
+    velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 5435173173845726636, guid: 405fd88cfb39c4247ae818954af72ca9, type: 3}
+    applyColorGradient: 0
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: -1
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    applyStartColor: 0
+    startColor: {r: 0, g: 0, b: 0, a: 0}
+    applyDuration: 0
+    duration: 0
+    applyStartParticleSize: 0
+    startParticleSize: 0
+    applyStartParticleSpeed: 0
+    startParticleSpeed: 0
+    applyStartLifetime: 0
+    startLifetime: 0
+    applyMaxParticleNumber: 0
+    maxParticleNumber: 0
+    applyEmissionRate: 0
+    emissionRate: 0
+    applyBurstParticleNumber: 0
+    burstParticleNumber: 0
+    applyEffectGravity: 0
+    effectGravity: 0
+    applySprite: 0
+    sprite: {fileID: 0}
+    applyVelocityOverLifetime: 0
     velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
     velocityOverLifetimeMax: {x: 0, y: 0, z: 0}

@@ -546,7 +546,7 @@ PrefabInstance:
     - target: {fileID: 5386724788335797626, guid: 09ccb8b5ccdeb704d952a5d5f06a0e82, type: 3}
       propertyPath: 'particleSystems.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1647802941}
     - target: {fileID: 6628342964127020745, guid: 09ccb8b5ccdeb704d952a5d5f06a0e82, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -700,6 +700,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1647802941 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4041959934354722425, guid: 09ccb8b5ccdeb704d952a5d5f06a0e82, type: 3}
+  m_PrefabInstance: {fileID: 1126353522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031736418
 GameObject:
   m_ObjectHideFlags: 0

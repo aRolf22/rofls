@@ -46,7 +46,7 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     applyStartColor: 1
-    startColor: {r: 5.992157, g: 0, b: 0, a: 1}
+    startColor: {r: 0.92941177, g: 0.33333334, b: 0, a: 1}
     applyDuration: 0
     duration: 0
     applyStartParticleSize: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     applyStartColor: 1
-    startColor: {r: 5.992157, g: 0, b: 0, a: 1}
+    startColor: {r: 0.92941177, g: 0.33333334, b: 0, a: 1}
     applyDuration: 0
     duration: 0
     applyStartParticleSize: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     applyStartColor: 1
-    startColor: {r: 5.992157, g: 0, b: 0, a: 1}
+    startColor: {r: 0.92941177, g: 0.33333334, b: 0, a: 1}
     applyDuration: 0
     duration: 0
     applyStartParticleSize: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     applyStartColor: 1
-    startColor: {r: 5.992157, g: 0, b: 0, a: 1}
+    startColor: {r: 0.92941177, g: 0.33333334, b: 0, a: 1}
     applyDuration: 0
     duration: 0
     applyStartParticleSize: 0

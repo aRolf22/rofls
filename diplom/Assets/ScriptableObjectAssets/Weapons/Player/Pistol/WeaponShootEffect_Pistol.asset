@@ -45,6 +45,8 @@ MonoBehaviour:
       m_ColorSpace: -1
       m_NumColorKeys: 6
       m_NumAlphaKeys: 3
+    applyStartColor: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
     applyDuration: 1
     duration: 2
     applyStartParticleSize: 1

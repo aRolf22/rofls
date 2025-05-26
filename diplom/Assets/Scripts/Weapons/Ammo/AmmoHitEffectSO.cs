@@ -9,10 +9,13 @@ public class AmmoHitEffectSO : ScriptableObject
         [Tooltip("The prefab containing the particle system for this hit effect")]
         public GameObject prefab;
         
-        [Header("Color Gradient")]
+        [Header("Color Setting")]
         public bool applyColorGradient = true;
         [Tooltip("The color gradient for the hit effect")]
         public Gradient colorGradient;
+        public bool applyStartColor = true;
+        [Tooltip("The start color for particles")]
+        public Color startColor;
         
         [Header("Duration")]
         public bool applyDuration = true;

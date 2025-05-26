@@ -3436,7 +3436,7 @@ Camera:
   far clip plane: 1000
   field of view: 40
   orthographic: 1
-  orthographic size: 8.4375
+  orthographic size: 8.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6116,10 +6116,25 @@ MonoBehaviour:
     prefab: {fileID: 3962943492151851721, guid: 245d61a4defa6b949ad16eca62a8f630, type: 3}
     componentType: AmmoHitEffect
   - poolSize: 20
+    prefab: {fileID: 4619097105766988641, guid: e2fe6661dc74176409fd843a940aef97, type: 3}
+    componentType: AmmoHitEffect
+  - poolSize: 20
     prefab: {fileID: 2316359654102704870, guid: 9da77ffaa7b0e1747a41113a862176cf, type: 3}
     componentType: AmmoHitEffect
   - poolSize: 20
     prefab: {fileID: 837718596117833965, guid: 062a821cfe557114a858de056a96d59e, type: 3}
+    componentType: AmmoHitEffect
+  - poolSize: 20
+    prefab: {fileID: 2774690919164786220, guid: c483660553d02824ab321358953c84fc, type: 3}
+    componentType: AmmoHitEffect
+  - poolSize: 20
+    prefab: {fileID: 6951121682669896361, guid: b2db214655daa464bab2bc1825df768a, type: 3}
+    componentType: AmmoHitEffect
+  - poolSize: 20
+    prefab: {fileID: 482240294277491552, guid: ba4c4c648802fb84796d593ea7063449, type: 3}
+    componentType: AmmoHitEffect
+  - poolSize: 20
+    prefab: {fileID: 7765617596040141880, guid: ebd619cdedb313c43ba1194e165836ec, type: 3}
     componentType: AmmoHitEffect
 --- !u!4 &1978428537
 Transform:

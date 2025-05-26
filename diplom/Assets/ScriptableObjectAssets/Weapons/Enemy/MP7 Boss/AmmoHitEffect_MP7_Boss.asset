@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffectPrefabs:
   - prefab: {fileID: 7853615770937549561, guid: 1e006a8ea6a0acb44ab5e88d73246615, type: 3}
+    applyColorGradient: 1
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.8862745, g: 0.08950313, b: 0.019607825, a: 1}
@@ -44,14 +45,26 @@ MonoBehaviour:
       m_ColorSpace: -1
       m_NumColorKeys: 3
       m_NumAlphaKeys: 2
+    applyStartColor: 0
+    startColor: {r: 0, g: 0, b: 0, a: 0}
+    applyDuration: 1
     duration: 0.5
+    applyStartParticleSize: 1
     startParticleSize: 0.34
+    applyStartParticleSpeed: 1
     startParticleSpeed: 4.21
+    applyStartLifetime: 1
     startLifetime: 0.67
+    applyMaxParticleNumber: 1
     maxParticleNumber: 37
+    applyEmissionRate: 1
     emissionRate: 0
+    applyBurstParticleNumber: 1
     burstParticleNumber: 37
+    applyEffectGravity: 1
     effectGravity: -0.01
+    applySprite: 1
     sprite: {fileID: 0}
+    applyVelocityOverLifetime: 1
     velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
     velocityOverLifetimeMax: {x: 0, y: 0, z: 0}

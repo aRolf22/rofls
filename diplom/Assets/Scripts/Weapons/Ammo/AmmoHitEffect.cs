@@ -20,8 +20,12 @@ public class AmmoHitEffect : MonoBehaviour
 
         if (effectSettings.applyColorGradient)
             SetHitEffectColorGradient(effectSettings.colorGradient);
+            
+        if (effectSettings.applyStartColor)
+            SetHitEffectStartColor(effectSettings.startColor);
 
-        if (effectSettings.applyDuration || effectSettings.applyStartParticleSize || effectSettings.applyStartParticleSpeed || 
+
+        if (effectSettings.applyDuration || effectSettings.applyStartParticleSize || effectSettings.applyStartParticleSpeed ||
             effectSettings.applyStartLifetime || effectSettings.applyEffectGravity || effectSettings.applyMaxParticleNumber)
         {
             SetHitEffectParticleStartingValues(
@@ -54,8 +58,17 @@ public class AmmoHitEffect : MonoBehaviour
         ParticleSystem.ColorOverLifetimeModule colorOverLifetimeModule = particleSystem.colorOverLifetime;
         colorOverLifetimeModule.color = gradient;
     }
+    
+    /// <summary>
+    /// Устанавливает стартовый цвет частиц
+    /// </summary>
+    private void SetHitEffectStartColor(Color color)
+    {
+        ParticleSystem.MainModule mainModule = particleSystem.main;
+        mainModule.startColor = color;
+    }
 
-    private void SetHitEffectParticleStartingValues(float duration, float startParticleSize, float startParticleSpeed, 
+    private void SetHitEffectParticleStartingValues(float duration, float startParticleSize, float startParticleSpeed,
         float startLifetime, float effectGravity, int maxParticles)
     {
         ParticleSystem.MainModule mainModule = particleSystem.main;

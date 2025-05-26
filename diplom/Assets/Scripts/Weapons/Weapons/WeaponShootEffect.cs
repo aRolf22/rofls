@@ -20,8 +20,11 @@ public class WeaponShootEffect : MonoBehaviour
 
         if (effectSettings.applyColorGradient)
             SetShootEffectColorGradient(effectSettings.colorGradient);
+        
+         if (effectSettings.applyStartColor)
+            SetShootEffectStartColor(effectSettings.startColor);
 
-        if (effectSettings.applyDuration || effectSettings.applyStartParticleSize || effectSettings.applyStartParticleSpeed || 
+        if (effectSettings.applyDuration || effectSettings.applyStartParticleSize || effectSettings.applyStartParticleSpeed ||
             effectSettings.applyStartLifetime || effectSettings.applyEffectGravity || effectSettings.applyMaxParticleNumber)
         {
             SetShootEffectParticleStartingValues(
@@ -55,6 +58,15 @@ public class WeaponShootEffect : MonoBehaviour
     {
         ParticleSystem.ColorOverLifetimeModule colorOverLifetimeModule = particleSystem.colorOverLifetime;
         colorOverLifetimeModule.color = gradient;
+    }
+
+    /// <summary>
+    /// Устанавливает стартовый цвет частиц
+    /// </summary>
+    private void SetShootEffectStartColor(Color color)
+    {
+        ParticleSystem.MainModule mainModule = particleSystem.main;
+        mainModule.startColor = color;
     }
 
     private void SetShootEffectParticleStartingValues(float duration, float startParticleSize,

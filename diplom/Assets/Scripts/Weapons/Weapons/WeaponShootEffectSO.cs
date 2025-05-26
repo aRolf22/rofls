@@ -9,10 +9,14 @@ public class WeaponShootEffectSO : ScriptableObject
         [Tooltip("The prefab containing the particle system for this shoot effect")]
         public GameObject prefab;
 
-        [Header("Color Gradient")]
+        [Header("Color Settings")]
         public bool applyColorGradient = true;
         [Tooltip("The color gradient for this shoot effect. This gradient shows the color of particles during their lifetime - from left to right")]
         public Gradient colorGradient;
+        public bool applyStartColor = true;
+        [Tooltip("The start color for particles")]
+        public Color startColor;
+        
 
         [Header("Duration")]
         public bool applyDuration = true;

@@ -33,7 +33,7 @@ MonoBehaviour:
   ammoSpawnIntervalMin: 0
   ammoSpawnIntervalMax: 0
   isAmmoTrail: 1
-  ammoTrailTime: 3
+  ammoTrailTime: 0.2
   ammoTrailMaterial: {fileID: 2100000, guid: 6fc7d0b2dc9db3240be57611aa74501e, type: 2}
   ammoTrailStartWidth: 0.5
-  ammoTrailEndWidth: 0.5
+  ammoTrailEndWidth: 0.1

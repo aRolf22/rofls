@@ -3233,7 +3233,7 @@ Camera:
   far clip plane: 1000
   field of view: 40
   orthographic: 1
-  orthographic size: 8.4375
+  orthographic size: 22.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -6156,6 +6156,27 @@ MonoBehaviour:
     componentType: AmmoHitEffect
   - poolSize: 20
     prefab: {fileID: 8035722396677912187, guid: c71c26f4bb2e0524ca227c46a013eb02, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 5639307589576956173, guid: 0c8d2765c6d3b95499980c55f8359b84, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 5157200434760301475, guid: 8992899ec9bb77c4cbf9f871f8c0dc79, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 7304561069841259918, guid: aa847279d114640489e0e57f765be244, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 6149180917863366102, guid: 9aa460770cec05a40840d38809d8f319, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 4525305984325000486, guid: d84d45d434bf4484d81913d0c5c9affa, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 5602246153342443373, guid: ffaced74ca405574dafda82736874efa, type: 3}
+    componentType: WeaponShootEffect
+  - poolSize: 20
+    prefab: {fileID: 8064822103072289318, guid: 66dbe6f256fc607439fc2fff287f7623, type: 3}
     componentType: WeaponShootEffect
 --- !u!4 &1978428537
 Transform:

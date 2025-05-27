@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 675c9f8a35a2d99478ad14c6f9005316
+guid: 24702b904b1d80a4fadf39cec94aff57
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4964256087182174293
-    second: '[FULL MUZZLE FLASH] Submachine - MP5A3_0'
+      213: 1305982004348396026
+    second: '[FULL MUZZLE FLASH] Bazooka - M20_0'
+  - first:
+      213: 371925846338784247
+    second: '[FULL MUZZLE FLASH] Bazooka - M20_1'
+  - first:
+      213: -2603999071985341955
+    second: '[FULL MUZZLE FLASH] Bazooka - M20_2'
+  - first:
+      213: 1661418028098906554
+    second: '[FULL MUZZLE FLASH] Bazooka - M20_3'
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,67 +122,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: '[FULL MUZZLE FLASH] Submachine - MP5A3_0'
+      name: '[FULL MUZZLE FLASH] Bazooka - M20_0'
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.2, y: 0.55}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 558609a0c9494e440800000000000000
-      internalID: 4964256087182174293
+      spriteID: af12d3ca6b7cf1210800000000000000
+      internalID: 1305982004348396026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '[FULL MUZZLE FLASH] Submachine - MP5A3_1'
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.2, y: 0.55}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a37fada3dd4558742805f5bfa7159afa
-      internalID: 1517031191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: '[FULL MUZZLE FLASH] Submachine - MP5A3_2'
+      name: '[FULL MUZZLE FLASH] Bazooka - M20_1'
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.2, y: 0.55}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1e12c420d58008e469b41782028b24a9
-      internalID: -846248946
+      spriteID: 7fb4fc13698592500800000000000000
+      internalID: 371925846338784247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL MUZZLE FLASH] Bazooka - M20_2'
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9eddef3acbcdbd0800000000000000
+      internalID: -2603999071985341955
       vertices: []
       indices: 
       edges: []
@@ -182,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9e968b3933c5dca408efd693870ad737
+    spriteID: d2810dc37abb1cc478f63c5be95d7f7e
     internalID: 0
     vertices: []
     indices: 
@@ -192,11 +201,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":4,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.30000001192092898,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      '[FULL MUZZLE FLASH] Submachine - MP5A3_0': 4964256087182174293
-      '[FULL MUZZLE FLASH] Submachine - MP5A3_1': 1517031191
-      '[FULL MUZZLE FLASH] Submachine - MP5A3_2': -846248946
+      '[FULL MUZZLE FLASH] Bazooka - M20_0': 1305982004348396026
+      '[FULL MUZZLE FLASH] Bazooka - M20_1': 371925846338784247
+      '[FULL MUZZLE FLASH] Bazooka - M20_2': -2603999071985341955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

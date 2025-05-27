@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 675c9f8a35a2d99478ad14c6f9005316
+guid: 7206664cbd2fcb94a941978d906b12b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4964256087182174293
-    second: '[FULL MUZZLE FLASH] Submachine - MP5A3_0'
+      213: -4388864894777134597
+    second: '[FULL MUZZLE FLASH] AK 47_0'
+  - first:
+      213: 5284509035980544772
+    second: '[FULL MUZZLE FLASH] AK 47_1'
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,67 +116,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: '[FULL MUZZLE FLASH] Submachine - MP5A3_0'
+      name: '[FULL MUZZLE FLASH] AK 47_0'
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.2, y: 0.55}
+      pivot: {x: 0.1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 558609a0c9494e440800000000000000
-      internalID: 4964256087182174293
+      spriteID: bf170a3a1ae9713c0800000000000000
+      internalID: -4388864894777134597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '[FULL MUZZLE FLASH] Submachine - MP5A3_1'
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.2, y: 0.55}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a37fada3dd4558742805f5bfa7159afa
-      internalID: 1517031191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: '[FULL MUZZLE FLASH] Submachine - MP5A3_2'
+      name: '[FULL MUZZLE FLASH] AK 47_1'
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.2, y: 0.55}
+      pivot: {x: 0.1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b56fd38f8565940800000000000000
+      internalID: 5284509035980544772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL MUZZLE FLASH] AK 47_2'
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e12c420d58008e469b41782028b24a9
-      internalID: -846248946
+      spriteID: d2901de76712c634fbb9ee7209ed1482
+      internalID: -1321526388
       vertices: []
       indices: 
       edges: []
@@ -182,7 +185,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9e968b3933c5dca408efd693870ad737
+    spriteID: 9ae8817035ac79346a7ced143d32d919
     internalID: 0
     vertices: []
     indices: 
@@ -192,11 +195,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":4,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.10000000149011612,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      '[FULL MUZZLE FLASH] Submachine - MP5A3_0': 4964256087182174293
-      '[FULL MUZZLE FLASH] Submachine - MP5A3_1': 1517031191
-      '[FULL MUZZLE FLASH] Submachine - MP5A3_2': -846248946
+      '[FULL MUZZLE FLASH] AK 47_0': -4388864894777134597
+      '[FULL MUZZLE FLASH] AK 47_1': 5284509035980544772
+      '[FULL MUZZLE FLASH] AK 47_2': -1321526388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -47,7 +47,7 @@ Material:
     m_Floats:
     - _AlphaClip: 1
     - _AlphaToMask: 1
-    - _Bits: 64
+    - _Bits: 32
     - _Blend: 0
     - _CastShadows: 0
     - _Cull: 2
@@ -65,7 +65,6 @@ Material:
     m_Colors:
     - _DarkColor: {r: 0.14150941, g: 0.12482198, b: 0.12482198, a: 1}
     - _FireColor: {r: 2.9960785, g: 0.59607846, b: 0.07843135, a: 0}
-    - _FireColor2: {r: 0.4745098, g: 0.08921283, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &627829433592927919

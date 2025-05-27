@@ -5,8 +5,7 @@ public class WeaponShootEffect : MonoBehaviour
 {
     private new ParticleSystem particleSystem;
     private Transform followTarget;
-    private bool shouldFollow;
-     private bool requiresFollowUpdate; // Оптимизация: проверяем только если нужно
+    private bool requiresFollowUpdate; // Оптимизация: проверяем только если нужно
 
     private void Awake()
     {

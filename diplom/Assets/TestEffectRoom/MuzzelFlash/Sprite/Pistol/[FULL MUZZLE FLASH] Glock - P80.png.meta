@@ -1,52 +1,13 @@
 fileFormatVersion: 2
-guid: 891f30894175c9f4ea2fcaf7130f9174
+guid: 1d9b51a6710e9694d9104e7e4a091a46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7252070982817165424
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_0"
+      213: -2372057810297964942
+    second: '[FULL MUZZLE FLASH] Glock - P80_0'
   - first:
-      213: -8167179403747217990
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_1"
-  - first:
-      213: 188235285823815206
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_2"
-  - first:
-      213: 8466426287311693165
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_3"
-  - first:
-      213: 1557659568845994141
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_4"
-  - first:
-      213: -3015665310155218655
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_5"
-  - first:
-      213: -6017071692565397802
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_6"
-  - first:
-      213: 7811325595055847825
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_7"
-  - first:
-      213: 8213793032632907464
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_8"
-  - first:
-      213: -3478465942762972025
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_9"
-  - first:
-      213: 1092872673929323626
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_10"
-  - first:
-      213: -7062314718969962401
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_11"
-  - first:
-      213: 4458932426398585827
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_12"
-  - first:
-      213: 7867955586987059099
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_13"
-  - first:
-      213: -964551287504576454
-    second: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_14"
+      213: 8612643938988408369
+    second: '[FULL MUZZLE FLASH] Glock - P80_1'
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,7 +54,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -151,106 +112,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_0"
+      name: '[FULL MUZZLE FLASH] Glock - P80_0'
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 16
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0703cb0c22884a460800000000000000
-      internalID: 7252070982817165424
+      spriteID: 276bf7e3df1c41fd0800000000000000
+      internalID: -2372057810297964942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_1"
+      name: '[FULL MUZZLE FLASH] Glock - P80_1'
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e3350e702468770800000000000000
+      internalID: 8612643938988408369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL MUZZLE FLASH] Glock - P80_2'
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 16
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abda2c69a9958ae80800000000000000
-      internalID: -8167179403747217990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_2"
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 62ef8b1cefebc9200800000000000000
-      internalID: 188235285823815206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0421\u043F\u0440\u0430\u0439\u0442-0001_3"
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d652e3ce9d9ce7570800000000000000
-      internalID: 8466426287311693165
+      spriteID: 184dfe3f4140c5a49bae31b4fef3aae9
+      internalID: 1264085923
       vertices: []
       indices: 
       edges: []
@@ -259,7 +185,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8946895b9f66ad845b4f461394fb5c75
+    spriteID: 370201cb62e4c974fb9b129a825c37c0
     internalID: 0
     vertices: []
     indices: 
@@ -269,12 +195,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":4,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "\u0421\u043F\u0440\u0430\u0439\u0442-0001_0": 7252070982817165424
-      "\u0421\u043F\u0440\u0430\u0439\u0442-0001_1": -8167179403747217990
-      "\u0421\u043F\u0440\u0430\u0439\u0442-0001_2": 188235285823815206
-      "\u0421\u043F\u0440\u0430\u0439\u0442-0001_3": 8466426287311693165
+      '[FULL MUZZLE FLASH] Glock - P80_0': -2372057810297964942
+      '[FULL MUZZLE FLASH] Glock - P80_1': 8612643938988408369
+      '[FULL MUZZLE FLASH] Glock - P80_2': 1264085923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

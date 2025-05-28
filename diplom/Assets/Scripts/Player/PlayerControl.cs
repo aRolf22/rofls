@@ -34,6 +34,10 @@ public class PlayerControl : MonoBehaviour
     // Этот компонент нужен, чтобы в игроке считывать инпуты из InputSystem
     private PlayerInput playerInput;
 
+    Vector2 lastLookDirection = Vector2.down;
+
+
+
     private void Awake()
     {
         // Load components
@@ -102,9 +106,8 @@ public class PlayerControl : MonoBehaviour
         UseItemInput();
 
         // Player roll cooldown timer
-        PlayerRollCooldownTimer();
+        PlayerRollCooldownTimer();  
 
-        
     }
 
     private void MovementInput()
@@ -128,7 +131,6 @@ public class PlayerControl : MonoBehaviour
             direction = new Vector2(horizontalMovement, verticalMovement);
         }
         
-
 
         // Adjust distance for diagonal movement (pythagoras approximation)
         if (horizontalMovement != 0f && verticalMovement != 0f)
@@ -227,7 +229,34 @@ public class PlayerControl : MonoBehaviour
     private void AimWeaponInput(out Vector3 weaponDirection, out float weaponAngleDegrees, out float playerAngleDegrees, out AimDirection playerAimDirection)
     {
         // Get mouse world position
-        Vector3 mouseWorldPosition = HelperUtilities.GetMouseWorldPosition();
+        Vector3 mouseWorldPosition;
+
+        if (ThisIsAndroidBuild)
+        {
+            Vector2 PlayerRightStickInput = playerInput.actions["Look(Stick)"].ReadValue<Vector2>();
+            
+
+            // Если правый стик в движении (не в дефолтной нулевой точке по центру)
+            if (PlayerRightStickInput.x != 0 || PlayerRightStickInput.y != 0)
+            {
+                mouseWorldPosition = new Vector3(transform.position.x, transform.position.y, 0) + new Vector3(PlayerRightStickInput.x, PlayerRightStickInput.y, 0) * 10f;
+
+                // запоминание последнего взгляда правым стиком
+                lastLookDirection = PlayerRightStickInput;
+            }
+            else // Если стик не трогаем (он в нулевой точке по центру)
+            {
+                // Player смотрит в сторону, которая была последний раз, когда стик двигался
+                mouseWorldPosition = new Vector3(transform.position.x, transform.position.y, 0) + new Vector3(lastLookDirection.x, lastLookDirection.y, 0) * 10f;
+            }
+
+            Debug.Log("mouseWorldPosition: " + mouseWorldPosition);
+        }
+        else
+        {
+            // Get mouse world position
+            mouseWorldPosition = HelperUtilities.GetMouseWorldPosition();
+        }
 
         // Calculate direction vector of mouse cursor from weapon shoot position
         weaponDirection = (mouseWorldPosition - player.activeWeapon.GetShootPosition());
@@ -257,15 +286,15 @@ public class PlayerControl : MonoBehaviour
             Vector2 PlayerRightStickInput = playerInput.actions["Look(Stick)"].ReadValue<Vector2>();
             Debug.Log("PlayerRightStickInput: " + PlayerRightStickInput);
 
-            if (PlayerRightStickInput.x >= 0.75 || PlayerRightStickInput.x <= -0.75 || PlayerRightStickInput.y >= 0.75 || PlayerRightStickInput.y <= -0.75)
+            if (PlayerRightStickInput.x >= 0.6 || PlayerRightStickInput.x <= -0.6 || PlayerRightStickInput.y >= 0.6 || PlayerRightStickInput.y <= -0.6)
             {
                 // Trigger fire weapon event
                 player.fireWeaponEvent.CallFireWeaponEvent(true, leftMouseDownPreviousFrame, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
                 leftMouseDownPreviousFrame = true;
             }
         }
-            else
-            {
+        else
+        {
                 // Fire when left mouse button is clicked
                 if (Input.GetMouseButton(0))
                 {
@@ -277,7 +306,7 @@ public class PlayerControl : MonoBehaviour
                 {
                     leftMouseDownPreviousFrame = false;
                 }
-            }
+        }
     }
 
 

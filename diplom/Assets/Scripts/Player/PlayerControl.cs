@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -106,7 +107,7 @@ public class PlayerControl : MonoBehaviour
         UseItemInput();
 
         // Player roll cooldown timer
-        PlayerRollCooldownTimer();  
+        PlayerRollCooldownTimer();
 
     }
 
@@ -138,7 +139,7 @@ public class PlayerControl : MonoBehaviour
             direction *= 0.7f;
         }
 
-             // If there is movement either move or roll
+        // If there is movement either move or roll
         if (direction != Vector2.zero)
         {
             if (!rightMouseButtonDown)
@@ -148,6 +149,12 @@ public class PlayerControl : MonoBehaviour
             }
             // else player roll if not cooling down
             else if (playerRollCooldownTimer <= 0f)
+            {
+                PlayerRoll((Vector3)direction);
+            }
+
+            // Если это порт на телефон И если нажата кнопка переката
+            if (playerInput.actions["Roll(Android)"].IsPressed())
             {
                 PlayerRoll((Vector3)direction);
             }
@@ -319,6 +326,12 @@ public class PlayerControl : MonoBehaviour
         }
 
         if (Input.mouseScrollDelta.y > 0f)
+        {
+            NextWeapon();
+        }
+
+        // Смена оружия на андройде
+        if (playerInput.actions["ChangeWeapon(Android)"].WasPressedThisFrame())
         {
             NextWeapon();
         }

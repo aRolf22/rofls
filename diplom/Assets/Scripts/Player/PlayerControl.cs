@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Player))]
 [DisallowMultipleComponent]
@@ -27,6 +28,12 @@ public class PlayerControl : MonoBehaviour
     [HideInInspector] public bool isPlayerRolling = false;
 
 
+    // Порт
+    public bool ThisIsAndroidBuild;
+
+    // Этот компонент нужен, чтобы в игроке считывать инпуты из InputSystem
+    private PlayerInput playerInput;
+
     private void Awake()
     {
         // Load components
@@ -45,6 +52,8 @@ public class PlayerControl : MonoBehaviour
 
         // Set player animation speed
         SetPlayerAnimationSpeed();
+
+        playerInput = GetComponent<PlayerInput>();
     }
 
     /// <summary>
@@ -98,15 +107,28 @@ public class PlayerControl : MonoBehaviour
         
     }
 
-     private void MovementInput()
+    private void MovementInput()
     {
         // Get movement input
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
         float verticalMovement = Input.GetAxisRaw("Vertical");
         bool rightMouseButtonDown = Input.GetMouseButtonDown(1);
 
-        // Create a direction vector based on the input
-        Vector2 direction = new Vector2(horizontalMovement, verticalMovement);
+        Vector2 direction;
+
+        if (ThisIsAndroidBuild)
+        {
+            Vector2 PlayerLeftStickInput = playerInput.actions["Move(Stick)"].ReadValue<Vector2>();
+            Debug.Log("PlayerLeftStickInput: " + PlayerLeftStickInput);
+            direction = PlayerLeftStickInput;
+        }
+        else
+        {
+            // Create a direction vector based on the input ()
+            direction = new Vector2(horizontalMovement, verticalMovement);
+        }
+        
+
 
         // Adjust distance for diagonal movement (pythagoras approximation)
         if (horizontalMovement != 0f && verticalMovement != 0f)
@@ -226,20 +248,38 @@ public class PlayerControl : MonoBehaviour
         player.aimWeaponEvent.CallAimWeaponEvent(playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
     }
 
+
     private void FireWeaponInput(Vector3 weaponDirection, float weaponAngleDegrees, float playerAngleDegrees, AimDirection playerAimDirection)
     {
-        // Fire when left mouse button is clicked
-        if (Input.GetMouseButton(0))
+
+        if (ThisIsAndroidBuild)
         {
-            // Trigger fire weapon event
-            player.fireWeaponEvent.CallFireWeaponEvent(true, leftMouseDownPreviousFrame, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
-            leftMouseDownPreviousFrame = true;
+            Vector2 PlayerRightStickInput = playerInput.actions["Look(Stick)"].ReadValue<Vector2>();
+            Debug.Log("PlayerRightStickInput: " + PlayerRightStickInput);
+
+            if (PlayerRightStickInput.x >= 0.75 || PlayerRightStickInput.x <= -0.75 || PlayerRightStickInput.y >= 0.75 || PlayerRightStickInput.y <= -0.75)
+            {
+                // Trigger fire weapon event
+                player.fireWeaponEvent.CallFireWeaponEvent(true, leftMouseDownPreviousFrame, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
+                leftMouseDownPreviousFrame = true;
+            }
         }
-        else
-        {
-            leftMouseDownPreviousFrame = false;
-        }
+            else
+            {
+                // Fire when left mouse button is clicked
+                if (Input.GetMouseButton(0))
+                {
+                    // Trigger fire weapon event
+                    player.fireWeaponEvent.CallFireWeaponEvent(true, leftMouseDownPreviousFrame, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
+                    leftMouseDownPreviousFrame = true;
+                }
+                else
+                {
+                    leftMouseDownPreviousFrame = false;
+                }
+            }
     }
+
 
      private void SwitchWeaponInput()
     {

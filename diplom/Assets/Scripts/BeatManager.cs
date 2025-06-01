@@ -13,9 +13,12 @@ public class BeatManager : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i++; i < GameObject.FindGameObjectsWithTag("environment").Length())
+        int i = 0;
+        foreach (GameObject gameObject in GameObject.FindGameObjectsWithTag("pulsingObject"))
         {
-            
+
+            //intervals[i].
+            //i++;
         }
     }
 

@@ -1,12 +1,23 @@
+using System.Linq;
+using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
+
 
 public class BeatManager : MonoBehaviour
 {
     [SerializeField] private float bpm;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Intervals[] intervals;
+
+    void Start()
+    {
+        for (int i = 0; i++; i < GameObject.FindGameObjectsWithTag("environment").Length())
+        {
+            
+        }
+    }
 
     private void Update()
     {

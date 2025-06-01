@@ -1,10 +1,12 @@
-using NUnit.Framework.Constraints;
+//using System.Drawing;
+//using NUnit.Framework.Constraints;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class pulseBeat : MonoBehaviour
+public class environmentPulse : MonoBehaviour
 {
-    [SerializeField] float pulseSize;
+    [SerializeField] float pulseSize = 1.5f;
     [SerializeField] float returnSpeed;
     private Vector3 startSize;
 
@@ -15,7 +17,7 @@ public class pulseBeat : MonoBehaviour
 
     void Update()
     {
-        transform.localScale = Vector3.Lerp(transform.localScale, startSize, Time.deltaTime * returnSpeed);
+        transform.localScale = Vector3.Lerp(transform.localScale, startSize, Time.deltaTime * returnSpeed);     
     }
 
     public void Pulse()

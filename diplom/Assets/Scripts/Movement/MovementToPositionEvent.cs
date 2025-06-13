@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-
 [DisallowMultipleComponent]
 public class MovementToPositionEvent : MonoBehaviour
 {
@@ -11,7 +10,6 @@ public class MovementToPositionEvent : MonoBehaviour
         OnMovementToPosition?.Invoke(this, new MovementToPositionArgs() { movePosition = movePosition, currentPosition = currentPosition, moveSpeed = moveSpeed, moveDirection = moveDirection, isRolling = isRolling });
     }
 }
-
 public class MovementToPositionArgs : EventArgs
 {
     public Vector3 movePosition;

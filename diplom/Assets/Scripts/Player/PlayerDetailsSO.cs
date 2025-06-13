@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,17 +6,11 @@ public class PlayerDetailsSO : ScriptableObject
 {
     #region Header PLAYER BASE DETAILS
     [Space(10)]
-    [Header("PLAYER BASE DETAILS")]
+    [Header("БАЗОВАЯ ИНФОРМАЦИЯ О ИГРОКЕ")]
     #endregion
-    
-    #region Tooltip
-    [Tooltip("Player character name.")]
-    #endregion
+   
     public string playerCharacterName;
-    
-    #region Tooltip
-    [Tooltip("Prefab gameobject for the player")]
-    #endregion
+  
     public GameObject playerPrefab;
 
     #region Tooltip
@@ -27,7 +20,7 @@ public class PlayerDetailsSO : ScriptableObject
 
     #region Header HEALTH
     [Space(10)]
-    [Header("HEALTH")]
+    [Header("ЗДОРОВЬЕ")]
     #endregion
     #region Tooltip
     [Tooltip("Player starting health amount")]
@@ -44,7 +37,7 @@ public class PlayerDetailsSO : ScriptableObject
 
     #region Header WEAPON
     [Space(10)]
-    [Header("WEAPON")]
+    [Header("ОРУЖИЕ")]
     #endregion
     #region Tooltip
     [Tooltip("Player  initial starting weapon")]
@@ -57,7 +50,7 @@ public class PlayerDetailsSO : ScriptableObject
 
     #region Header OTHER
     [Space(10)]
-    [Header("OTHER")]
+    [Header("ДРУГОЕ")]
     #endregion
     #region Tooltip
     [Tooltip("Player icon sprite to be used in the minimap")]

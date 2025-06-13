@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-
 
 #region REQUIRE COMPONENTS
 [RequireComponent(typeof(HealthEvent))]
@@ -37,8 +35,6 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Rigidbody2D))]
 [DisallowMultipleComponent]
 #endregion REQUIRE COMPONENTS
-
-
 
 public class Player : MonoBehaviour
 {
@@ -83,40 +79,28 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
-    /// <summary>
-    /// Initialize the player
-    /// </summary>
     public void Initialize(PlayerDetailsSO playerDetails)
     {
         this.playerDetails = playerDetails;
 
-        //Create player starting weapons
         CreatePlayerStartingWeapons();
 
 
-        // Set player starting health
         SetPlayerHealth();
     }
 
     private void OnEnable()
     {
-        // Subscribe to player health event
         healthEvent.OnHealthChanged += HealthEvent_OnHealthChanged;
     }
 
     private void OnDisable()
     {
-        // Unsubscribe from player health event
         healthEvent.OnHealthChanged -= HealthEvent_OnHealthChanged;
     }
 
-    /// <summary>
-    /// Handle health changed event
-    /// </summary>
     private void HealthEvent_OnHealthChanged(HealthEvent healthEvent, HealthEventArgs healthEventArgs)
     {
-        // If player has died
         if (healthEventArgs.healthAmount <= 0f)
         {
             destroyedEvent.CallDestroyedEvent(true, 0);
@@ -124,64 +108,40 @@ public class Player : MonoBehaviour
 
     }
 
-
-    /// <summary>
-    /// Set the player starting weapon
-    /// </summary>
     private void CreatePlayerStartingWeapons()
     {
-        // Clear list
         weaponList.Clear();
 
-        // Populate weapon list from starting weapons
         foreach (WeaponDetailsSO weaponDetails in playerDetails.startingWeaponList)
         {
-            // Add weapon to player
             AddWeaponToPlayer(weaponDetails);
         }
     }
 
-    /// <summary>
-    /// Set player health from playerDetails SO
-    /// </summary>
     private void SetPlayerHealth()
     {
         health.SetStartingHealth(playerDetails.playerHealthAmount);
     }
 
-    /// <summary>
-    /// Returns the player position
-    /// </summary>
     public Vector3 GetPlayerPosition()
     {
         return transform.position;
     }
 
-
-    /// <summary>
-    /// Add a weapon to the player weapon dictionary
-    /// </summary>
     public Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
     {
         Weapon weapon = new Weapon() { weaponDetails = weaponDetails, weaponReloadTimer = 0f, weaponClipRemainingAmmo = weaponDetails.weaponClipAmmoCapacity, weaponRemainingAmmo = weaponDetails.weaponAmmoCapacity, isWeaponReloading = false };
 
-        // Add the weapon to the list
         weaponList.Add(weapon);
 
-        // Set weapon position in list
         weapon.weaponListPosition = weaponList.Count;
 
-        // Set the added weapon as active
         setActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
 
         return weapon;
 
     }
 
-
-    /// <summary>
-    /// Returns true if the weapon is held by the player - otherwise returns false
-    /// </summary>
     public bool IsWeaponHeldByPlayer(WeaponDetailsSO weaponDetails)
     {
 

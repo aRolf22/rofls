@@ -59,9 +59,6 @@ public class AmmoHitEffect : MonoBehaviour
         colorOverLifetimeModule.color = gradient;
     }
     
-    /// <summary>
-    /// Устанавливает стартовый цвет частиц
-    /// </summary>
     private void SetHitEffectStartColor(Color color)
     {
         ParticleSystem.MainModule mainModule = particleSystem.main;

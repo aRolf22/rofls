@@ -5,16 +5,14 @@ public class WeaponShootEffect : MonoBehaviour
 {
     private new ParticleSystem particleSystem;
     private Transform followTarget;
-    private bool requiresFollowUpdate; // Оптимизация: проверяем только если нужно
+    private bool requiresFollowUpdate;
 
     private void Awake()
     {
         particleSystem = GetComponent<ParticleSystem>();
-        // Отключаем скрипт, если не требуется обновление (экономит CPU)
         enabled = false;
 
     }
-
     
     private void Update()
     {
@@ -24,7 +22,6 @@ public class WeaponShootEffect : MonoBehaviour
         }
         else if (requiresFollowUpdate)
         {
-            // Если цель исчезла, но флаг остался - отключаем
             requiresFollowUpdate = false;
             enabled = false;
         }
@@ -38,11 +35,9 @@ public class WeaponShootEffect : MonoBehaviour
             return;
         }
 
-        // Настройка следования
         requiresFollowUpdate = effectSettings.followShootPosition;
         followTarget = target;
         
-        // Включаем скрипт только если требуется следование
         enabled = requiresFollowUpdate;
 
 
@@ -88,9 +83,6 @@ public class WeaponShootEffect : MonoBehaviour
         colorOverLifetimeModule.color = gradient;
     }
 
-    /// <summary>
-    /// Устанавливает стартовый цвет частиц
-    /// </summary>
     private void SetShootEffectStartColor(Color color)
     {
         ParticleSystem.MainModule mainModule = particleSystem.main;

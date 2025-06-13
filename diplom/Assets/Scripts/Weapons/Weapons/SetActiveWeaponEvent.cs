@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -13,7 +11,6 @@ public class SetActiveWeaponEvent : MonoBehaviour
         OnSetActiveWeapon?.Invoke(this, new SetActiveWeaponEventArgs() { weapon = weapon });
     }
 }
-
 
 public class SetActiveWeaponEventArgs : EventArgs
 {

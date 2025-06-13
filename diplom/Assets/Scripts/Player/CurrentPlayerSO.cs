@@ -7,4 +7,3 @@ public class CurrentPlayerSO : ScriptableObject
     public string playerName;
 
 }
-

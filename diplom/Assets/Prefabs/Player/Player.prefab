@@ -664,7 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementDetails: {fileID: 11400000, guid: 05869ce841944b143b852b18cc48f98b, type: 2}
   isPlayerRolling: 0
-  ThisIsAndroidBuild: 1
+  ThisIsAndroidBuild: 0
 --- !u!114 &5611705543561411583
 MonoBehaviour:
   m_ObjectHideFlags: 0
